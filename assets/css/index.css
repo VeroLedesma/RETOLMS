@@ -1,0 +1,245 @@
+.header-legendary {
+    width: 100%;
+    height: 22rem;
+    padding: 10px;
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background-image: url('https://cdn.cloudflare.steamstatic.com/steam/clusters/frontpage/3526d18c78f1e12b9d449984/page_bg_english.jpg?t=1677801804'), linear-gradient(to right, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 50%);
+    background-position: -22px -96px;
+    margin: 14px 2px;
+}
+
+/* Default Section */
+section {
+    color: #fff;
+}
+
+section button {
+    width: 108px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 6px;
+    border-radius: 2px;
+    color: #fff;
+}
+
+section.special-offerts>.header,
+section.games-streaming>.header {
+    width: 100%;
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 14px 2px;
+}
+
+/* Special Offerts */
+section.special-offerts>.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: calc(50% - 10px); /* Altura por defecto para los elementos */
+    gap: 10px; /* Espacio entre los elementos */
+}
+
+section.special-offerts>.grid-container>.item {
+    background: #27272b;
+    border-radius: 6px;
+    color: #8f98a0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 16%;
+}
+
+section.special-offerts>.grid-container>.item:nth-child(1) {
+    background: url('https://cdn.akamai.steamstatic.com/steam/spotlights/c870390a2007f144dfc11083/spotlight_image_english.jpg?t=1699644696');
+    background-size: cover;
+}
+
+section.special-offerts>.grid-container>.item:nth-child(2) {
+    background: url('https://cdn.akamai.steamstatic.com/steam/spotlights/85ffb542ac019a637baf5e3f/spotlight_image_english.jpg?t=1700266620');
+    background-size: cover;
+}
+
+section.special-offerts>.grid-container>.item:nth-child(3) {
+    background: url('https://cdn.akamai.steamstatic.com/steam/apps/868360/header.jpg?t=1667226571');
+    background-size: cover;
+    background-position: -24px;
+}
+
+section.special-offerts>.grid-container>.item:nth-child(4) {
+    background: url('https://cdn.akamai.steamstatic.com/steam/apps/1509510/header.jpg?t=1698820922');
+    background-size: cover;
+    background-position: 0px -82px;
+}
+
+section.special-offerts>.grid-container>.item:nth-child(-n + 2) {
+    grid-row: span 2; /* Los dos primeros elementos ocupan toda la altura */
+}
+
+section.special-offerts>.grid-container>.item:nth-child(n + 3):nth-child(-n + 4) {
+    grid-row: span 1; /* Los dos elementos siguientes ocupan la mitad de la altura */
+    grid-column: span 2; /* Ocupan dos columnas */
+}
+
+section.special-offerts > .grid-container > .item {
+    position: relative; /* Establecer la posición relativa */
+  }
+  
+  section.special-offerts > .grid-container > .item > .item_footer,
+  section.special-offerts > .grid-container > .item > .item_offert {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #232425c9;
+    font-size: 12px;
+    width: 100%;
+    height: 80px;
+    padding: 16px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease; /* Añadir una transición si es deseado */
+    transform: translateY(100%); /* Inicialmente, fuera de la vista */
+    opacity: 0; /* Inicialmente, oculto */
+  }
+  
+  /* Mostrar el item_footer en hover */
+  section.special-offerts > .grid-container > .item:hover > .item_footer,
+  section.special-offerts > .grid-container > .item:hover > .item_offert {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+
+section.special-offerts>.grid-container>.item>.item_footer h2, section.special-offerts>.grid-container>.item>.item_offert h2 {
+    font-family: "Motiva Sans", Sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 10px;
+    letter-spacing: 0.03em;
+    font-weight: normal;
+    padding-top: 2px;
+}
+
+/* Games Streaming Now */
+section.games-streaming>.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto; /* Dos filas automáticas */
+    gap: 10px; /* Espacio entre los elementos */
+}
+
+section.games-streaming>.grid-container>.item {
+    width: 478px;
+    height: 210px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    padding: 1px;
+    color: #8f98a0;
+}
+
+section.games-streaming>.grid-container>.item>.video {
+    /*padding-top: 34.575342%;*/
+    overflow: hidden;
+    z-index: 1;
+}
+
+section.games-streaming>.grid-container>.item>.title {
+    height: 44px;
+    overflow: hidden;
+    background: #2f3037;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 12px;
+    position: relative;
+    bottom: 48px;
+    z-index: 2;
+}
+
+section.games-streaming>.grid-container>.item>.title>span.live_steam_viewers {
+    font-size: 13px;
+    margin: 0px 5px 0px 0px;
+    padding-left: 28px;
+    pointer-events: none;
+    background-image: url('../images/icons/icon_viewers.png');
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: 2px;
+    line-height: 23px;
+    text-decoration: none;
+}
+
+/* Login */
+.login {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #27272b;
+    border-radius: 6px;
+    color: #8f98a0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 14px 0;
+}
+
+.login a:nth-child(1) {
+    color: white;
+    font-weight: bold;
+}
+
+.login a:nth-child(2) {
+    height: 36px;
+    border-radius: 2px;
+    background: linear-gradient(to bottom, #799905 5%, #536904 95%);
+    padding: 8px;
+    text-align: center;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        display: none; /* Ocultar la barra lateral en dispositivos pequeños */
+    }
+
+    .content {
+        width: 100%; /* Asegurar que el contenido ocupe todo el ancho */
+        margin-left: 0; /* Ajustar el margen izquierdo si es necesario */
+    }
+
+    /* Ofertas especiales */
+    section.special-offerts>.grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en lugar de cuatro */
+    }
+
+    section.special-offerts>.grid-container>.item:nth-child(-n + 2),
+    section.special-offerts>.grid-container>.item:nth-child(n + 3):nth-child(-n + 4) {
+        grid-row: auto; /* Reiniciar el número de filas */
+        grid-column: auto; /* Reiniciar el número de columnas */
+        width: 100%; /* Ocupar todo el ancho disponible */
+    }
+
+    section.games-streaming>.grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en lugar de tres */
+    }
+
+    section.games-streaming>.grid-container>.item {
+        width: 294px;
+        height: 209px;
+    }
+
+    section.games-streaming>.grid-container>.item>.video {
+        padding-top: 0; /* Proporción de aspecto para videos (16:9) */
+    }
+
+    .login {
+        width: 596px;
+        height: auto; /* Altura automática para adaptarse al contenido */
+        padding: 20px; /* Aumentar espacio alrededor del contenido */
+    }
+
+    .login p {
+        margin-bottom: 10px; /* Espaciado inferior entre párrafos */
+    }
+}

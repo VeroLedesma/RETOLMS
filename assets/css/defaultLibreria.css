@@ -1,0 +1,473 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@100;400;600&display=swap");
+
+:root {
+    --white: #fff;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+/* Reset CSS */
+a {
+	color: var(--white);
+	text-decoration: none;
+}
+
+body {
+	background-color: #1a1b1f;
+	font-family: "Urbanist", sans-serif;
+	letter-spacing: 0.07em;
+}
+
+.container {
+    display: flex;
+}
+
+/* ------------------- Sidebar Section ------------------- */
+.sidebar {
+	width: 20rem;
+	border-right: 2px solid #3a3c47;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 30px 20px;
+	color: var(--white);
+}
+
+.logo {
+	position: absolute;
+	top: 50px;
+	left: 12%;
+	transform: translate(-50%, -50%);
+}
+
+.sidebar ul {
+	list-style: none;
+}
+
+.sidebar ul li {
+    padding: 22px;
+    margin: 30px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.sidebar ul i {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.sidebar ul li:hover,
+.sidebar li.active {
+	background-color: #3482e7;
+}
+.sidebar ul li:hover i,
+.sidebar li.active i {
+	color: white;
+}
+
+.fa-shopping-bag {
+	transform: translateX(3px);
+}
+
+/* ------------------- Sidebar Section ------------------- */
+
+/* ------------------- Content Section ------------------- */
+.content {
+    padding: 28px;
+    flex: 1;
+}
+/* ------------------- Content Section ------------------- */
+
+/* ------------------- Header Section ------------------- */
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .search {
+	width: 348px;
+	padding: 1em 1.5em;
+	background-color: #313237;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 50px;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+header .search > input {
+	background-color: transparent;
+	border: none;
+	outline: none;
+	color: white;
+	height: 100%;
+	width: 90%;
+	font-family: "Urbanist", sans-serif;
+	font-weight: 400;
+}
+
+header .search > input::placeholder {
+	font-weight: 600;
+}
+
+header a {
+    flex-grow: 1;
+    flex-basis: 200px;
+    padding: 10px;
+    color: #9aa2dc;
+    margin: 0px 16px;
+	cursor: pointer;
+}
+
+header a:hover {
+	color: #4990ec;
+}
+
+header a.active {
+    color: white;
+    border-bottom: 2px solid #da373c;
+}
+
+header i {
+	color: white;
+}
+/* ------------------- Header Section ------------------- */
+
+
+.main-flex {
+	display: flex;
+	margin-top: 30px;
+}
+
+main {
+    /* width: 928px; */
+    margin-right: 56px;
+}
+/* ------------------- Announcement Card ------------------- */
+.announcement {
+	padding: 70px 30px 30px 30px;
+	border-radius: 30px;
+	border: 2px solid rgba(255, 255, 255, 0.1);
+	background-color: #313237;
+	background-image: radial-gradient(
+		ellipse at top,
+		#3a3c47,
+		rgba(0, 0, 0, 0.6)
+	);
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.announcement .spiderman-img {
+	width: 280px;
+	position: absolute;
+	top: -40px;
+	right: -20px;
+}
+
+.announcement .spiderman-img img {
+	max-width: 100%;
+}
+
+.tag {
+	padding: 0.3em 0.75em;
+	background-color: #ff3d3d;
+	border-radius: 5px;
+	font-size: 0.8rem;
+	color: white;
+	width: max-content;
+	margin-bottom: 20px;
+}
+
+.announcement h1 {
+	color: white;
+	width: 50%;
+	margin-bottom: 20px;
+}
+
+
+
+.purchase h2 {
+	font-size: 0.8rem;
+	color: white;
+	padding: 0 10px;
+}
+
+.purchase button {
+	padding: 1em 2em;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	font-family: "Urbanist", sans-serif;
+	background-color: #3482e7;
+	color: white;
+	font-weight: 600;
+	cursor: pointer;
+	position: relative;
+	z-index: 2;
+	width: 155px;
+	bottom: -5px;
+    left: 30px;
+}
+.main{
+	 bottom: 48px;
+}
+.install{
+	display: flex;!important;
+	flex-direction: row;
+}
+
+.purchase button::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-color: #3482e7;
+	filter: blur(10px);
+	z-index: -1;
+	opacity: 0;
+	transition: opacity 0.2s linear;
+}
+
+.purchase button:hover::after {
+	opacity: 1;
+}
+.most-played {
+    max-width: 100%;
+    color: white;
+}
+
+.most-played h3 {
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.games-card {
+    flex: 1 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
+
+.game-image-container {
+    height: 150px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.games-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s linear;
+}
+
+.games-card img:hover {
+    transform: scale(1.05);
+}
+
+/* -----------------------------------------aside---------------------------------------------- */
+aside {
+    flex: 0.5;
+}
+
+.library {
+    /*width: 512px;*/
+    color: white;
+    padding: 30px;
+    background-image: linear-gradient(to top, #1a1b1f 50%, #313237 90%);
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.library h3 {
+    margin-bottom: 20px;
+}
+
+.library-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.game-logo {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.game-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-details {
+    flex: 1;
+}
+
+.library-card i {
+    cursor: pointer;
+    flex: 0.1;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.fa-check-circle {
+    color: #3482e7 !important;
+    font-size: 1.1rem;
+}
+
+.library hr {
+    border: none;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 70%;
+    margin: 20px auto;
+}
+
+.offline,
+.online {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.online {
+    background-color: rgb(23, 221, 23);
+}
+
+.offline {
+    background-color: #ff3d3d;
+}
+
+
+/* ----------------------------------------- Left Box ---------------------------------------------- */
+/* Pantallas medianas */
+@media screen and (max-width: 1024px) {
+    .main-flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .announcement {
+        padding: 50px;
+    }
+
+    .announcement h1 {
+        width: 60%;
+    }
+
+    .most-played .cards {
+        gap: 15px;
+    }
+
+    .games-card {
+        flex: 1 0 calc(50% - 15px);
+        max-width: calc(50% - 15px);
+    }
+
+    .library-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .game-logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .game-details {
+        flex: 1;
+    }
+}
+
+/* Pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .announcement {
+        padding: 30px;
+    }
+
+    .announcement .spiderman-img {
+        position: static;
+        margin-top: 20px;
+    }
+
+    .announcement h1 {
+        width: auto;
+    }
+
+    .purchase {
+        width: 100%;
+    }
+
+    .purchase h2 {
+        width: auto;
+    }
+
+    .most-played .cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .games-card {
+        flex: 1 0 calc(50% - 20px);
+        max-width: calc(50% - -304px);
+    }
+}
+
+/* Dispositivos móviles */
+@media screen and (max-width: 480px) {
+    .announcement {
+        padding: 20px;
+    }
+
+    .announcement h1 {
+        font-size: 1.8rem;
+    }
+
+    .announcement .purchase {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .purchase h2 {
+        margin-top: 10px;
+    }
+
+    .most-played .cards {
+        gap: 10px;
+    }
+
+    .games-card {
+        flex: 1 0 100%;
+        max-width: 100%;
+    }
+
+    .library-card {
+        flex-direction: column;
+    }
+
+    .library-card i {
+        margin-top: 10px;
+    }
+}
+
