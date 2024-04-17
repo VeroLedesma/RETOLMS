@@ -12,6 +12,7 @@ body {
   background-color: #1a1b1f;
   font-family: "Urbanist", sans-serif;
   letter-spacing: 0.07em;
+  color: #fff;
 }
 
 h1 {
@@ -161,7 +162,7 @@ header {
   margin: 5px 5px 5px 5px;
 }
 
-.main__input {
+.main__input, select {
   display: inline-block;
   width: 100%;
   border: 1px solid #F1F3F5;
@@ -171,6 +172,10 @@ header {
   border-radius: 3px;
   color: #000;
   font-family: "Montserrat", sans-serif;
+}
+
+.version-game {
+  margin-bottom: 20px;
 }
 
 .main__input:focus {
