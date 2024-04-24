@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <!-- Definición del elemento tienda -->
+    <xs:element name="tienda">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="juegos" type="juegosType"/>
+                <xs:element name="categorias" type="categoriasType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Definición del tipo juegos -->
+    <xs:complexType name="juegosType">
+        <xs:sequence>
+            <xs:element name="juego" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nombre" type="xs:string"/>
+                        <xs:element name="categoria" type="xs:string"/>
+                        <xs:element name="genero" type="xs:string"/>
+                        <xs:element name="precio" type="xs:string"/>
+                        <xs:element name="desarrollador" type="xs:string"/>
+                        <xs:element name="web" type="xs:string"/>
+                        <xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+                        <xs:element name="imagen" type="xs:string"/>
+                        <xs:element name="plataformas" type="plataformasType"/>
+                        <xs:element name="idiomas" type="idiomasType"/>
+                        <xs:element name="clasificación" type="clasificaciónType"/>
+                        <xs:element name="versiones">
+                            <xs:complexType>
+                                <xs:choice minOccurs="1" maxOccurs="2">
+                                    <xs:element name="version2D" type="xs:string"/>
+                                    <xs:element name="version3D" type="xs:string"/>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="id" type="xs:string" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!-- Definición del tipo plataformas -->
+    <xs:complexType name="plataformasType">
+        <xs:sequence>
+            <xs:element name="plataforma" type="xs:string" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!-- Definición del tipo idiomas -->
+    <xs:complexType name="idiomasType">
+        <xs:sequence>
+            <xs:element name="idioma" type="xs:string" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!-- Definición del tipo clasificación -->
+    <xs:complexType name="clasificaciónType">
+        <xs:sequence>
+            <xs:element name="edad" type="xs:string" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!-- Definición del tipo categorias -->
+    <xs:complexType name="categoriasType">
+        <xs:sequence>
+            <xs:element name="categoria" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nombre" type="xs:string"/>
+                        <xs:element name="icono" type="xs:string"/>
+                        <xs:element name="genero" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:simpleContent>
+                                    <xs:extension base="xs:string">
+                                        <xs:attribute name="id" type="xs:string" use="required"/>
+                                    </xs:extension>
+                                </xs:simpleContent>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="id" type="xs:string" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+</xs:schema>

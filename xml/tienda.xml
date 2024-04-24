@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tienda1.xsd"?>
+<tienda>
+    <juegos>
+        <juego id="A01">
+            <nombre>Animal Crossing</nombre>
+            <categoria> 04 </categoria>
+            <genero>G11</genero>
+            <precio>30$</precio>
+            <desarrollador>EA</desarrollador>
+            <web>wwww.animalCrossing.com</web>
+            <descripcion> Descripción del juego</descripcion>
+            <imagen>../img/animalCrosing.jpg</imagen>
+            <plataformas>
+                <plataforma>Nintendo Switch</plataforma>
+                <plataforma> Nintendo DS </plataforma>
+            </plataformas>
+            <idiomas>
+                <idioma>Español</idioma>
+                <idioma> Inglés </idioma>
+            </idiomas>
+            <clasificación>
+                <edad> +18 años </edad>
+                <edad> +16 años </edad>
+            </clasificación>
+            <versiones>
+                <version2D> 2D </version2D>
+                <version3D> 3D </version3D>
+            </versiones>
+
+        </juego>
+        <juego id="B02">
+            <nombre>Zelda</nombre>
+            <categoria>02</categoria>
+            <genero>G06</genero>
+            <precio>80$</precio>
+            <desarrollador>EA</desarrollador>
+            <web>wwww.Zelda.com</web>
+            <imagen>../img/Zelda.jpg</imagen>
+            <plataformas>
+                <plataforma> PSP</plataforma>
+                <plataforma> Play Station 3 </plataforma>
+            </plataformas>
+            <idiomas>
+                <idioma>Español</idioma>
+                <idioma> Inglés </idioma>
+                <idioma> Frances </idioma>
+            </idiomas>
+            <clasificación>
+                <edad> +18 años </edad>
+                <edad> +16 años </edad>
+            </clasificación>
+            <versiones>
+                <version2D> 2D </version2D>
+                <version3D> 3D </version3D>
+            </versiones>
+        </juego>
+
+        <juego id="C03">
+            <nombre>Mario Kart</nombre>
+            <categoria>01</categoria>
+            <genero>G05</genero>
+            <precio>50$</precio>
+            <desarrollador>Nintendo</desarrollador>
+            <web>wwww.mariokart.com</web>
+            <descripcion> Descripción del juego</descripcion>
+
+            <imagen>../img/marioKart.jpg</imagen>
+            <plataformas>
+                <plataforma> WII U</plataforma>
+                <plataforma> Nintendo Switch </plataforma>
+            </plataformas>
+            <idiomas>
+                <idioma> Inglés </idioma>
+                <idioma> Frances </idioma>
+            </idiomas>
+            <clasificación>
+                <edad> +18 años </edad>
+                <edad> +16 años </edad>
+            </clasificación>
+            <versiones>
+                <version2D> 2D </version2D>
+                <version3D> 3D </version3D>
+            </versiones>
+        </juego>
+        <juego id="D04">
+            <nombre>Call of Duty: Warzone</nombre>
+            <categoria>01</categoria>
+            <genero>G01</genero>
+            <precio>60$</precio>
+            <desarrollador>Activision</desarrollador>
+            <web>www.callofduty.com/warzone</web>
+            <imagen>../img/warzone.jpg</imagen>
+            <plataformas>
+                <plataforma>PlayStation 4</plataforma>
+                <plataforma>Xbox One</plataforma>
+                <plataforma>PC</plataforma>
+            </plataformas>
+            <idiomas>
+                <idioma>Español</idioma>
+                <idioma>Inglés</idioma>
+                <idioma>Alemán</idioma>
+            </idiomas>
+            <clasificación>
+                <edad> +18 años </edad>
+                <edad> +16 años </edad>
+            </clasificación>
+            <versiones>
+                <version2D> 2D </version2D>
+                <version3D> 3D </version3D>
+            </versiones>
+        </juego>
+
+
+        <juego id="E05">
+            <nombre>Minecraft</nombre>
+            <categoria>03</categoria>
+            <genero> G10 </genero>
+            <precio>25$</precio>
+            <desarrollador>Mojang Studios</desarrollador>
+            <web>www.minecraft.net</web>
+            <descripcion> Descripción del juego</descripcion>
+            <imagen>../img/minecraft.jpg</imagen>
+            <plataformas>
+                <plataforma>PC</plataforma>
+                <plataforma>PlayStation 4</plataforma>
+                <plataforma>Xbox One</plataforma>
+                <plataforma>Nintendo Switch</plataforma>
+                <plataforma>iOS</plataforma>
+                <plataforma>Android</plataforma>
+            </plataformas>
+            <idiomas>
+                <idioma>Español</idioma>
+                <idioma>Inglés</idioma>
+                <idioma>Francés</idioma>
+                <idioma>Alemán</idioma>
+                <idioma>Italiano</idioma>
+            </idiomas>
+            <clasificación>
+                <edad> +18 años </edad>
+                <edad> +16 años </edad>
+            </clasificación>
+            <versiones>
+                <version2D> 2D </version2D>
+                <version3D> 3D </version3D>
+            </versiones>
+        </juego>
+        <juego id="F06">
+            <nombre>Assassin's Creed: Valhalla</nombre>
+            <categoria>05</categoria>
+            <genero>G12</genero>
+            <precio>70$</precio>
+            <desarrollador>Ubisoft</desarrollador>
+            <web>www.assassinscreed.com</web>
+            <imagen>../img/valhalla.jpg</imagen>
+            <plataformas>
+                <plataforma>PlayStation 4</plataforma>
+                <plataforma>PlayStation 5</plataforma>
+                <plataforma>Xbox One</plataforma>
+                <plataforma>PC</plataforma>
+            </plataformas>
+            <idiomas>
+                <idioma>Español</idioma>
+                <idioma>Inglés</idioma>
+                <idioma>Francés</idioma>
+                <idioma>Alemán</idioma>
+                <idioma>Italiano</idioma>
+            </idiomas>
+            <clasificación>
+                <edad> +18 años </edad>
+                <edad> +16 años </edad>
+            </clasificación>
+            <versiones>
+                <version> 2D </version>
+                <version> 3D </version>
+            </versiones>
+        </juego>
+    </juegos>
+
+    <categorias>
+        <categoria id="01">
+            <nombre>Acción</nombre>
+            <icono>accion.png</icono>
+            <genero id="G01"> Disparos</genero>
+            <genero id="G02"> Lucha</genero>
+            <genero id="G03"> Beat 'Em Up</genero>
+            <genero id="G04">Hack and Slash </genero>
+            <genero id="G05">Carreras </genero>
+        </categoria>
+
+        <categoria id="02">
+            <nombre>Aventura</nombre>
+            <icono>aventura.png</icono>
+            <genero id="G06">Aventura gráfica</genero>
+            <genero id="G07">Aventura conversacional</genero>
+            <genero id="G08">Aventura de rompecabezas</genero>
+            <genero id="G09">Aventura de interactiva</genero>
+        </categoria>
+
+        <categoria id="03">
+            <nombre>SandBox</nombre>
+            <icono>sandbox.png</icono>
+            <genero id="G10">Juego Libre </genero>
+        </categoria>
+        <categoria id="04">
+            <nombre>Role-Playing</nombre>
+            <icono>rpg.png</icono>
+            <genero id="G11">Fantasía</genero>
+        </categoria>
+        <categoria id="05">
+            <nombre>Estrategia</nombre>
+            <icono>estrategia.png</icono>
+            <genero id="G12">Aventura de interactiva</genero>
+            <genero id="G13">Aventura de rompecabezas</genero>
+        </categoria>
+    </categorias>
+</tienda>
+
+
+         
