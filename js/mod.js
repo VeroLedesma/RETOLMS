@@ -17,5 +17,12 @@ function checkForm() {
 
 function enviarDatos() {
     var answer = window.confirm("Mensaje que nosotros queramos");
+    if(answer) {
+        document.formSend.action = "nuestro php";
+        document.formSend.method
+        document.formSend.submit();
+    } else {
+        alert();
+    }
 
 }

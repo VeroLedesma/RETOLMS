@@ -1,5 +1,5 @@
 <?php
-require_once('BDCOnexion.php');
+require_once('BDConexion.php');
 
 try {
     $rutaXq = "prueba.xq";
@@ -23,14 +23,6 @@ try {
     // Ejecutar la consulta
     $result = $query->execute();
 
-    // close query
-    $query->close();
-    // close session
-    $session->close();
-
-    // Show the result
-    echo $result;
-
     // Lanza la xquery
     $xmlSRT = $session->execute("xquery /");
 
@@ -41,5 +33,16 @@ try {
     $proc = new XSLTProcessor;
     $proc->importStyleSheet($xsl);
 
-}
+    echo $proc->transformToXML($xml);
 
+    // Close any database query if applicable
+    $query->close();
+
+    $session->close();
+
+    header("Location: ");
+    exit();
+} catch(Exception e) {
+    $output = "Error: " . $e->getMessage();
+    echo $output;
+}
