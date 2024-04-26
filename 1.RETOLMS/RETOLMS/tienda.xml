@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tienda1.xsd"?>
+<tienda>
+    
+    <!-- Primer elemento juegos -->
+    <juegos>
+        <juego id="A1">
+            <nombre>Animal Crossing</nombre>
+            <categoria> B4 </categoria>
+            <genero>D2</genero>
+            <precio>30.00</precio>
+            <desarrollador>EA</desarrollador>
+            <web>wwww.animalCrossing.com</web>
+            <descripcion> Descripción del juego</descripcion>
+            <imagen>../img/animalCrosing.jpg</imagen>
+            <plataformas>
+                <plataforma>Nintendo Switch</plataforma>
+                <plataforma> Nintendo DS </plataforma>
+            </plataformas>
+            <idiomas>
+                <idioma>Español</idioma>
+                <idioma> Inglés </idioma>
+            </idiomas>
+            <clasificación>
+                <edad> +18 años </edad>
+            </clasificación>
+            <versiones>
+                <version2D> 2D </version2D>
+                <version3D> 3D </version3D>
+            </versiones>
+
+        </juego>
+        <juego id="A2">
+            <nombre>Zelda</nombre>
+            <categoria>B2</categoria>
+            <genero>C6</genero>
+            <precio>80.00</precio>
+            <desarrollador>EA</desarrollador>
+            <web>wwww.Zelda.com</web>
+            <imagen>../img/Zelda.jpg</imagen>
+            <plataformas>
+                <plataforma> PSP</plataforma>
+                <plataforma> Play Station 3 </plataforma>
+            </plataformas>
+            <idiomas>
+                <idioma>Español</idioma>
+                <idioma> Inglés </idioma>
+                <idioma> Frances </idioma>
+            </idiomas>
+            <clasificación>
+                <edad> +18 años </edad>
+            </clasificación>
+            <versiones>
+                <version2D> 2D </version2D>
+                <version3D> 3D </version3D>
+            </versiones>
+        </juego>
+
+        <juego id="A3">
+            <nombre>Mario Kart</nombre>
+            <categoria>B1</categoria>
+            <genero>C5</genero>
+            <precio>50.00</precio>
+            <desarrollador>Nintendo</desarrollador>
+            <web>wwww.mariokart.com</web>
+            <descripcion> Descripción del juego</descripcion>
+
+            <imagen>../img/marioKart.jpg</imagen>
+            <plataformas>
+                <plataforma> WII U</plataforma>
+                <plataforma> Nintendo Switch </plataforma>
+            </plataformas>
+            <idiomas>
+                <idioma> Inglés </idioma>
+                <idioma> Frances </idioma>
+            </idiomas>
+            <clasificación>
+                <edad> +18 años </edad>
+            </clasificación>
+            <versiones>
+                <version2D> 2D </version2D>
+                <version3D> 3D </version3D>
+            </versiones>
+        </juego>
+        <juego id="A4">
+            <nombre>Call of Duty: Warzone</nombre>
+            <categoria>B1 </categoria>
+            <genero>C1</genero>
+            <precio>60.00</precio>
+            <desarrollador>Activision</desarrollador>
+            <web>www.callofduty.com/warzone</web>
+            <imagen>../img/warzone.jpg</imagen>
+            <plataformas>
+                <plataforma>PlayStation 4</plataforma>
+                <plataforma>Xbox One</plataforma>
+                <plataforma>PC</plataforma>
+            </plataformas>
+            <idiomas>
+                <idioma>Español</idioma>
+                <idioma>Inglés</idioma>
+                <idioma>Alemán</idioma>
+            </idiomas>
+            <clasificación>
+                <edad> +18 años </edad>
+            </clasificación>
+            <versiones>
+                <version2D> 2D </version2D>
+                <version3D> 3D </version3D>
+            </versiones>
+        </juego>
+
+
+        <juego id="A5">
+            <nombre>Minecraft</nombre>
+            <categoria>B3</categoria>
+            <genero> D1 </genero>
+            <precio>25.00</precio>
+            <desarrollador>Mojang Studios</desarrollador>
+            <web>www.minecraft.net</web>
+            <descripcion> Descripción del juego</descripcion>
+            <imagen>../img/minecraft.jpeg</imagen>
+            <plataformas>
+                <plataforma>PC</plataforma>
+                <plataforma>PlayStation 4</plataforma>
+                <plataforma>Xbox One</plataforma>
+                <plataforma>Nintendo Switch</plataforma>
+                <plataforma>iOS</plataforma>
+                <plataforma>Android</plataforma>
+            </plataformas>
+            <idiomas>
+                <idioma>Español</idioma>
+                <idioma>Inglés</idioma>
+                <idioma>Francés</idioma>
+                <idioma>Alemán</idioma>
+                <idioma>Italiano</idioma>
+            </idiomas>
+            <clasificación>
+                <edad> +18 años </edad>
+            </clasificación>
+            <versiones>
+                <version2D> 2D </version2D>
+                <version3D> 3D </version3D>
+            </versiones>
+        </juego>
+        <juego id="A6">
+            <nombre>Assassin's Creed: Valhalla</nombre>
+            <categoria>B5</categoria>
+            <genero>D3</genero>
+            <precio>70.00</precio>
+            <desarrollador>Ubisoft</desarrollador>
+            <web>www.assassinscreed.com</web>
+            <imagen>../img/valhalla.jpg</imagen>
+            <plataformas>
+                <plataforma>PlayStation 4</plataforma>
+                <plataforma>PlayStation 5</plataforma>
+                <plataforma>Xbox One</plataforma>
+                <plataforma>PC</plataforma>
+            </plataformas>
+            <idiomas>
+                <idioma>Español</idioma>
+                <idioma>Inglés</idioma>
+                <idioma>Francés</idioma>
+                <idioma>Alemán</idioma>
+                <idioma>Italiano</idioma>
+            </idiomas>
+            <clasificación>
+                <edad> +18 años </edad>
+            </clasificación>
+            <versiones>
+                <version2D> 2D </version2D>
+                <version3D> 3D </version3D>
+            </versiones>
+        </juego>
+    </juegos>
+
+    <!-- Segundo elemento categorias -->
+    
+    <categorias>
+        <categoria id="B1">
+            <nombre>Acción</nombre>
+            <genero id="C1"> Disparos</genero>
+            <genero id="C2"> Lucha</genero>
+            <genero  id="C3"> Beat 'Em Up</genero>
+            <genero  id="C4">Hack and Slash </genero>
+            <genero   id="C5">Carreras </genero>
+        </categoria>
+
+        <categoria id="B2">
+            <nombre>Aventura</nombre>
+            <genero id="C6">Aventura gráfica</genero>
+            <genero id="C7">Aventura conversacional</genero>
+            <genero id="C8">Aventura de rompecabezas</genero>
+            <genero id ="C9">Aventura de interactiva</genero>
+        </categoria>
+
+        <categoria id="B3">
+            <nombre>SandBox</nombre>
+            <genero  id="D1">Juego Libre </genero>
+        </categoria>
+        <categoria id="B4">
+            <nombre>Role-Playing</nombre>
+            <genero id="D2">Fantasía</genero>
+        </categoria>
+        <categoria  id="B5">
+            <nombre>Estrategia</nombre>
+            <genero id="D3">Aventura de interactiva</genero>
+            <genero id="D4">Aventura de rompecabezas</genero>
+        </categoria>
+    </categorias>
+</tienda>
+
+
+         

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Definición del tipo de dato para el precio -->
+    <xs:simpleType name="precioType">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2" />
+            <xs:minInclusive value="10" />
+            <xs:maxInclusive value="500" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Definición del tipo de dato para el id -->
+    <xs:simpleType name="idType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z][0-9]" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Definición del tipo de dato para la ruta de la imagen -->
+   
+    <xs:simpleType name="imagenType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\.\./img/[^/]+\.(jpg|jpeg|png|gif)"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Definición del elemento tienda -->
+    <xs:element name="tienda">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="juegos" type="juegosType" />
+                <xs:element name="categorias" type="categoriasType" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definición del tipo juegos -->
+    <xs:complexType name="juegosType">
+        <xs:sequence>
+            <xs:element name="juego" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nombre" type="xs:string" />
+                        <xs:element name="categoria" type="xs:string" />
+                        <xs:element name="genero" type="xs:string" />
+                        <xs:element name="precio" type="precioType" />
+                        <xs:element name="desarrollador" type="xs:string" />
+                        <xs:element name="web" type="xs:string" />
+                        <xs:element name="descripcion" type="xs:string" minOccurs="0" />
+                        <xs:element name="imagen" type="imagenType" />
+                        <xs:element name="plataformas" type="plataformasType" />
+                        <xs:element name="idiomas" type="idiomasType" />
+                        <xs:element name="clasificación" type="clasificaciónType" />
+                        <xs:element name="versiones">
+                            <xs:complexType>
+                                <xs:choice minOccurs="1" maxOccurs="2">
+                                    <xs:element name="version2D" type="xs:string" />
+                                    <xs:element name="version3D" type="xs:string" />
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="id" type="idType" use="required" />
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definición del tipo plataformas -->
+    <xs:complexType name="plataformasType">
+        <xs:sequence>
+            <xs:element name="plataforma" type="xs:string" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definición del tipo idiomas -->
+    <xs:complexType name="idiomasType">
+        <xs:sequence>
+            <xs:element name="idioma" type="xs:string" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definición del tipo clasificación  por edad -->
+    <xs:complexType name="clasificaciónType">
+        <xs:sequence>
+            <xs:element name="edad" type="xs:string" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definición del tipo categorias -->
+    <xs:complexType name="categoriasType">
+        <xs:sequence>
+            <xs:element name="categoria" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nombre" type="xs:string" />
+                        <xs:element name="genero" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:simpleContent>
+                                    <xs:extension base="xs:string">
+                                        <xs:attribute name="id" type="idType" use="required" />
+                                    </xs:extension>
+                                </xs:simpleContent>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="id" type="idType" use="required" />
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
