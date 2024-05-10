@@ -37,7 +37,7 @@ CON TUS CREDENCIALES DE BASEX -->
         if (isset($_GET["nombre"]) && isset($_GET["apellido"]) && isset($_GET["edad"]) && isset($_GET["correo"])) {
 
             // Crear sesión
-            $session = new Session();
+            $session = new Session(); //Ignorar el error que pueda salir al usar PHP Intelephense
             // Abrir la base de datos
             $session->execute("open PruebaReto");
             // Cargar la consulta XQuery desde el archivo

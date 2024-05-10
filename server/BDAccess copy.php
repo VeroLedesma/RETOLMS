@@ -52,7 +52,7 @@ function altaDato()
             $correo = $_POST['Correo'];
 
             // Crear sesión
-            $session = new Session();
+            $session = new Session(); //Ignorar el error que pueda salir al usar PHP Intelephense
             // Abrir la base de datos
             $session->execute("open PruebaReto");
             // Cargar la consulta XQuery desde el archivo
@@ -130,7 +130,7 @@ function modificar()
         if (isset($_POST['Nombre']) && isset($_POST['Apellido']) && isset($_POST['Edad']) && isset($_POST['Correo'])) {
 
             // Crear sesión
-            $session = new Session();
+            $session = new Session(); 
             // Abrir la base de datos
             $session->execute("open PruebaReto");
             // Cargar la consulta XQuery desde el archivo
