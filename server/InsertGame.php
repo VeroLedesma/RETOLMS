@@ -1,7 +1,7 @@
 <?php
-    //
-    require_once('BDConexion.php');
-
+//
+require_once('BDConexion.php');
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Recoger los datos del formulario
         $nombre = $_POST["nombre"];
@@ -12,12 +12,12 @@
         $foto = $_FILES["foto"];
         $platforms = $_POST["platforms"];
 
-        if(isset($nombre, $category, $precio, $developers, $website, $foto, $platforms)) {
+        if (isset($nombre, $category, $precio, $developers, $website, $foto, $platforms)) {
             // Comprueba si la imagen se cargó correctamente
             if ($foto['error'] !== UPLOAD_ERR_OK) {
                 die('Error al subir la imagen');
             }
-                
+
             // Crea un nombre único para la imagen
             $nombreImagen = uniqid() . '-' . $foto['name'];
 
@@ -41,12 +41,12 @@
             $query = $session->query($xq);
 
             // Vincular el valor del parámetro "codigo" a la consulta XQuery
-            $query->bind('nombre', $nombre);
-            $query->bind('category', $category);
-            $query->bind('precio', $precio);
-            $query->bind('developers', $developers);
-            $query->bind('website', $website);
-            $query->bind('foto', $foto['tmp_name']); // Aquí usamos 'tmp_name' que es la ubicación temporal del archivo subido
+            $query->bind('$nombre', $nombre);
+            $query->bind('$category', $category);
+            $query->bind('$precio', $precio);
+            $query->bind('$developers', $developers);
+            $query->bind('$website', $website);
+            $query->bind('$foto', $foto['tmp_name']); // Aquí usamos 'tmp_name' que es la ubicación temporal del archivo subido
             $query->bind('platforms', $platforms);
 
             // Ejecutar la consulta
@@ -92,4 +92,4 @@
         // Manejar cualquier excepción que ocurra durante la ejecución
         echo $e->getMessage();
     }
-?>
+}
