@@ -1,7 +1,8 @@
 let nombre, categoria, precio, desarrollador, imagen, website;
-
+const guardar = document.getElementById('guardar');
 // Alta de datos
-function altaJuego(event) {
+guardar.addEventListener('click', (event) => {
+    console.log('me han clicado')
     event.preventDefault();
 
     // Obtengo el contenido de las variables
@@ -22,10 +23,10 @@ function altaJuego(event) {
     if (imagen.size > 1048576) {
         alert('La imagen es demasiado grande');
         return;
-    }  
+    }
 
     let xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://localhost/RETOLMS/server/InsertGame.php', true);
+    xhr.open('POST', 'http://localhost/SANTILMS/server/InsertGame.php', true);
 
     // Crear un objeto FormData y añadir los datos del formulario
     let formData = new FormData();
@@ -37,13 +38,12 @@ function altaJuego(event) {
     formData.append('website', website);
 
     // Enviar los datos del formulario
-    xhr.send(formData);
+
 
     xhr.onreadystatechange = () => {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
                 console.log('Datos guardados correctamente');
-                update();
             } else if (xhr.status === 404) {
                 console.log('Página no encontrada');
             } else {
@@ -51,8 +51,5 @@ function altaJuego(event) {
             }
         }
     }
-}
-
-// Obtener el formulario y añadir un manejador de eventos para el envío
-const form = document.querySelector('form');
-form.addEventListener('submit', altaJuego);
+    xhr.send(formData);
+}) 

@@ -3,20 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legends Store - Settings</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
-    
+
     <link rel="stylesheet" href="./assets/css/default.css">
     <link rel="stylesheet" href="./assets/css/settings.css">
-	
+
     <!-- Fonts -->
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css" />
 
     <!-- JS -->
-    <script src="/js/mod.js"></script>
+    <script src="js/mod.js" defer></script>
 </head>
 
 <body>
@@ -63,7 +63,7 @@
         </header>
 
         <div class="container2">
-            
+
             <div class="main">
                 <div class="main__header">
                     <h2>Alta videojuego</h2>
@@ -120,7 +120,8 @@
                                 <option value="Portugues">Portugues</option>
                                 <option value="Chino">Chino</option>
                             </select>
-                            <label class="main__input-label" for="Clasificacion">Clasificacion edad del videojuego:</label>
+                            <label class="main__input-label" for="Clasificacion">Clasificacion edad del
+                                videojuego:</label>
                             <select name="Clasificacion" id="clasification">
                                 <option value="+16 años"> +16 años </option>
                                 <option value="+18 años"> +18 años </option>
@@ -130,8 +131,9 @@
                                 <input type="radio" value="2D" name="Version" /> 2D
                                 <input type="radio" value="3D" name="Version" /> 3D
                             </div>
+
                         </form>
-                        <button class="btn main__save-button" onclick="altaJuego()"">Guardar</button>
+                        <button type="button" class="btn main__save-button" id="guardar">Guardar</button>
                         <button class="btn main__cancel-button">Cancelar</button>
                     </div>
                 </div>
