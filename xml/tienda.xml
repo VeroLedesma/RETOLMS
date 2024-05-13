@@ -172,8 +172,8 @@
                 <edad> +16 años </edad>
             </clasificación>
             <versiones>
-                <version> 2D </version>
-                <version> 3D </version>
+                <version2D> 2D </version2D>
+                <version3D> 3D </version3D>
             </versiones>
         </juego>
     </juegos>
