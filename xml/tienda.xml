@@ -11,23 +11,10 @@
             <web>wwww.animalCrossing.com</web>
             <descripcion> Descripción del juego</descripcion>
             <imagen>../img/animalCrosing.jpg</imagen>
-            <plataformas>
-                <plataforma>Nintendo Switch</plataforma>
-                <plataforma> Nintendo DS </plataforma>
-            </plataformas>
-            <idiomas>
-                <idioma>Español</idioma>
-                <idioma> Inglés </idioma>
-            </idiomas>
-            <clasificación>
-                <edad> +18 años </edad>
-                <edad> +16 años </edad>
-            </clasificación>
-            <versiones>
-                <version2D> 2D </version2D>
-                <version3D> 3D </version3D>
-            </versiones>
-
+            <plataforma> Nintendo DS </plataforma>
+            <idioma> Inglés </idioma>
+            <clasificacion>+18 años</clasificacion>
+            <version>3D</version>
         </juego>
         <juego id="B02">
             <nombre>Zelda</nombre>
@@ -37,23 +24,10 @@
             <desarrollador>EA</desarrollador>
             <web>wwww.Zelda.com</web>
             <imagen>../img/Zelda.jpg</imagen>
-            <plataformas>
-                <plataforma> PSP</plataforma>
-                <plataforma> Play Station 3 </plataforma>
-            </plataformas>
-            <idiomas>
-                <idioma>Español</idioma>
-                <idioma> Inglés </idioma>
-                <idioma> Frances </idioma>
-            </idiomas>
-            <clasificación>
-                <edad> +18 años </edad>
-                <edad> +16 años </edad>
-            </clasificación>
-            <versiones>
-                <version2D> 2D </version2D>
-                <version3D> 3D </version3D>
-            </versiones>
+            <plataforma> Play Station 3 </plataforma>
+            <idioma> Inglés </idioma>
+            <clasificacion>+16 años</clasificacion>
+            <version>3D</version>
         </juego>
 
         <juego id="C03">
@@ -64,24 +38,11 @@
             <desarrollador>Nintendo</desarrollador>
             <web>wwww.mariokart.com</web>
             <descripcion> Descripción del juego</descripcion>
-
             <imagen>../img/marioKart.jpg</imagen>
-            <plataformas>
-                <plataforma> WII U</plataforma>
-                <plataforma> Nintendo Switch </plataforma>
-            </plataformas>
-            <idiomas>
-                <idioma> Inglés </idioma>
-                <idioma> Frances </idioma>
-            </idiomas>
-            <clasificación>
-                <edad> +18 años </edad>
-                <edad> +16 años </edad>
-            </clasificación>
-            <versiones>
-                <version2D> 2D </version2D>
-                <version3D> 3D </version3D>
-            </versiones>
+            <plataforma> Nintendo Switch </plataforma>
+            <idioma> Frances </idioma>
+            <clasificacion>+18 años</clasificacion>
+            <version>2D</version>
         </juego>
         <juego id="D04">
             <nombre>Call of Duty: Warzone</nombre>
@@ -91,24 +52,10 @@
             <desarrollador>Activision</desarrollador>
             <web>www.callofduty.com/warzone</web>
             <imagen>../img/warzone.jpg</imagen>
-            <plataformas>
-                <plataforma>PlayStation 4</plataforma>
-                <plataforma>Xbox One</plataforma>
-                <plataforma>PC</plataforma>
-            </plataformas>
-            <idiomas>
-                <idioma>Español</idioma>
-                <idioma>Inglés</idioma>
-                <idioma>Alemán</idioma>
-            </idiomas>
-            <clasificación>
-                <edad> +18 años </edad>
-                <edad> +16 años </edad>
-            </clasificación>
-            <versiones>
-                <version2D> 2D </version2D>
-                <version3D> 3D </version3D>
-            </versiones>
+            <plataforma> Xbox One </plataforma>
+            <idioma> Inglés </idioma>
+            <clasificacion>+16 años</clasificacion>
+            <version>3D</version>
         </juego>
 
 
@@ -121,29 +68,10 @@
             <web>www.minecraft.net</web>
             <descripcion> Descripción del juego</descripcion>
             <imagen>../img/minecraft.jpg</imagen>
-            <plataformas>
-                <plataforma>PC</plataforma>
-                <plataforma>PlayStation 4</plataforma>
-                <plataforma>Xbox One</plataforma>
-                <plataforma>Nintendo Switch</plataforma>
-                <plataforma>iOS</plataforma>
-                <plataforma>Android</plataforma>
-            </plataformas>
-            <idiomas>
-                <idioma>Español</idioma>
-                <idioma>Inglés</idioma>
-                <idioma>Francés</idioma>
-                <idioma>Alemán</idioma>
-                <idioma>Italiano</idioma>
-            </idiomas>
-            <clasificación>
-                <edad> +18 años </edad>
-                <edad> +16 años </edad>
-            </clasificación>
-            <versiones>
-                <version2D> 2D </version2D>
-                <version3D> 3D </version3D>
-            </versiones>
+            <plataforma> Xbox One </plataforma>
+            <idioma> Inglés </idioma>
+            <clasificacion>+16 años</clasificacion>
+            <version>3D</version>
         </juego>
         <juego id="F06">
             <nombre>Assassin's Creed: Valhalla</nombre>
@@ -153,27 +81,10 @@
             <desarrollador>Ubisoft</desarrollador>
             <web>www.assassinscreed.com</web>
             <imagen>../img/valhalla.jpg</imagen>
-            <plataformas>
-                <plataforma>PlayStation 4</plataforma>
-                <plataforma>PlayStation 5</plataforma>
-                <plataforma>Xbox One</plataforma>
-                <plataforma>PC</plataforma>
-            </plataformas>
-            <idiomas>
-                <idioma>Español</idioma>
-                <idioma>Inglés</idioma>
-                <idioma>Francés</idioma>
-                <idioma>Alemán</idioma>
-                <idioma>Italiano</idioma>
-            </idiomas>
-            <clasificación>
-                <edad> +18 años </edad>
-                <edad> +16 años </edad>
-            </clasificación>
-            <versiones>
-                <version> 2D </version>
-                <version> 3D </version>
-            </versiones>
+            <plataforma> Xbox One </plataforma>
+            <idioma> Inglés </idioma>
+            <clasificacion>+16 años</clasificacion>
+            <version>3D</version>
         </juego>
     </juegos>
 
@@ -215,6 +126,3 @@
         </categoria>
     </categorias>
 </tienda>
-
-
-         
