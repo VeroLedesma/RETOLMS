@@ -3,20 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legends Store - Settings</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
-    
+
     <link rel="stylesheet" href="./assets/css/default.css">
     <link rel="stylesheet" href="./assets/css/settings.css">
-	
+
     <!-- Fonts -->
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css" />
 
     <!-- JS -->
-    <script src="/js/mod.js"></script>
+    <script src="js/mod.js" defer></script>
 </head>
 
 <body>
@@ -63,7 +63,6 @@
         </header>
 
         <div class="container2">
-            
             <div class="main">
                 <div class="main__header">
                     <h2>Alta videojuego</h2>
@@ -73,9 +72,10 @@
                         <form method="post">
                             <label class="main__input-label" for="Nombre">Nombre:</label>
                             <input class="main__input" placeholder="Nombre del videojuego" type="text" name="nombre">
-                            <!-- Me falta genero papu -->
-                            <label class="main__input-label" for="Categoria">Categoría</label>
-                            <select name="Categoria" id="category">
+                            <label class="main__input-label" for="Genero">Genero:</label>
+                            <input class="main__input" placeholder="Genero del videojuego" type="text" name="genero">
+                            <label class="main__input-label" for="Categoria">Categoria:</label>
+                            <select name="categoria" id="category">
                                 <option value="Accion">Acción</option>
                                 <option value="Aventura">Aventura</option>
                                 <option value="Carreras">Carreras</option>
@@ -86,7 +86,7 @@
                             <label class="main__input-label" for="Precio">Precio:</label>
                             <input class="main__input" placeholder="Precio del videojuego" type="text" name="precio">
                             <label class="main__input-label" for="Desarrollador">Desarrollador</label>
-                            <select name="Desarrollador" id="developers">
+                            <select name="desarrolladores" id="developers">
                                 <option value="EA">EA</option>
                                 <option value="Ubisoft">Ubisoft</option>
                                 <option value="Arcane">Arcane</option>
@@ -101,7 +101,7 @@
                             <label class="main__input-label" for="Imagen">Imagen de portada:</label>
                             <input class="main__input" type="file" name="imagen">
                             <label class="main__input-label" for="Imagen">Plataforma del videojuego:</label>
-                            <select name="Plataforma" id="platforms">
+                            <select name="plataformas" id="platforms">
                                 <option value="PlayStation 4">PlayStation 4</option>
                                 <option value="PlayStation 5">PlayStation 5</option>
                                 <option value="Xbox One">Xbox One</option>
@@ -112,7 +112,7 @@
                                 <option value="Android">Android</option>
                             </select>
                             <label class="main__input-label" for="Idiomas">Idiomas del videojuego:</label>
-                            <select name="Idiomas" id="languages">
+                            <select name="idiomas" id="languages">
                                 <option value="Español">Español</option>
                                 <option value="Inglés">Inglés</option>
                                 <option value="Ruso">Ruso</option>
@@ -121,17 +121,18 @@
                                 <option value="Chino">Chino</option>
                             </select>
                             <label class="main__input-label" for="Clasificacion">Clasificacion edad del videojuego:</label>
-                            <select name="Clasificacion" id="clasification">
+                            <select name="clasificacion" id="clasification">
                                 <option value="+16 años"> +16 años </option>
                                 <option value="+18 años"> +18 años </option>
                             </select>
                             <label class="main__input-label" for="Version">Version del videojuego:</label>
                             <div class="version-game">
-                                <input type="radio" value="2D" name="Version" /> 2D
-                                <input type="radio" value="3D" name="Version" /> 3D
+                                <input type="radio" value="2D" name="version" /> 2D
+                                <input type="radio" value="3D" name="version" /> 3D
                             </div>
+
                         </form>
-                        <button class="btn main__save-button" onclick="altaJuego()"">Guardar</button>
+                        <button type="button" class="btn main__save-button" id="guardar">Guardar</button>
                         <button class="btn main__cancel-button">Cancelar</button>
                     </div>
                 </div>
