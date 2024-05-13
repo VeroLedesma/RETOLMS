@@ -10,9 +10,11 @@
 class Session {
     // class variables.
     var $socket, $info, $buffer, $bpos, $bsize;
+
     function Session() {
         // Leer fichero config BD
         $config = parse_ini_file('../config/BDsetup.ini');
+
         $host = $config['host'];
         $port = intval($config['puerto']);
         $user = $config['usuario'];

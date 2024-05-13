@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="tienda1.xsd"?>
+<?xml-stylesheet type="text/xsl" href="tienda.xsl"?>
 <tienda>
     <juegos>
         <juego id="A01">
@@ -171,8 +172,8 @@
                 <edad> +16 años </edad>
             </clasificación>
             <versiones>
-                <version> 2D </version>
-                <version> 3D </version>
+                <version2D> 2D </version2D>
+                <version3D> 3D </version3D>
             </versiones>
         </juego>
     </juegos>
