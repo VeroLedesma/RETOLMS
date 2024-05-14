@@ -3,19 +3,21 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         try {
             // Recoger los datos del formulario
+            $id = $_POST['id'];
             $nombre = $_POST['nombre'];
             $categoria = $_POST['categoria'];
             $genero = $_POST['genero'];
             $precio = $_POST['precio'];
-            $desarrolladores = $_POST['developers'];
-            $web = $_POST['website'];
+            $desarrollador = $_POST['desarrollador'];
+            $web = $_POST['imagen'];
+            $descripcion = $_POST['descripcion'];
             $imagen = $_FILES['foto'];
-            $plataformas = $_POST['plataformas'];
-            $idiomas = $_POST['idiomas'];
+            $plataforma = $_POST['plataforma'];
+            $idioma = $_POST['idioma'];
             $clasificacion = $_POST['clasificacion'];
-            $versiones = $_POST['versiones'];
+            $version = $_POST['version'];
 
-            if (isset($nombre, $categoria, $genero, $precio, $desarrolladores, $web, $imagen, $plataformas, $idiomas, $clasificacion, $versiones)) {
+            if (isset($id, $nombre, $categoria, $genero, $precio, $desarrollador, $web, $descripcion, $imagen, $plataformas, $idiomas, $clasificacion, $versiones)) {
                 // Comprueba si la imagen se cargó correctamente
                 if ($foto['error'] !== UPLOAD_ERR_OK) {
                     die('Error al subir la imagen');
@@ -44,18 +46,20 @@
                 $query = $session->query($xq);
 
                 // Vincular el valor del parámetro "codigo" a la consulta XQuery
+                $query->bind('id', $id);
                 $query->bind('$nombre', $nombre);
                 $query->bind('$categoria', $categoria);
                 $query->bind('$genero', $genero);
                 $query->bind('$precio', $precio);
-                $query->bind('$desarrolladores', $desarrolladores);
+                $query->bind('$desarrollador', $desarrollador);
                 $query->bind('$web', $web);
+                $query->bind('$descripcion', $descripcion);
                 $query->bind('$foto', $foto['tmp_name']); // Aquí usamos 'tmp_name' que es la ubicación temporal del archivo subido
-                $query->bind('$plataformas', $plataformas);
-                $query->bind('$idiomas', $idiomas);
+                $query->bind('$plataforma', $plataforma);
+                $query->bind('$idioma', $idioma);
                 $query->bind('$clasificacion', $clasificacion);
-                $query->bind('$versiones', $versiones);
-
+                $query->bind('$version', $version);
+                
                 // Ejecutar la consulta
                 $result = $query->execute();
 
@@ -79,6 +83,9 @@
                 // Crear un nuevo elemento 'juego'
                 $juego = $xml->juegos->addChild('juego');
 
+                // Añadir el atributo 'id' al elemento 'juego'
+                $juego->addAttribute('id', $id);
+
                 // Añadir los datos al nuevo elemento 'juego'
                 $juego->addChild('nombre', $nombre);
                 $juego->addChild('categoria', $categoria);
@@ -86,31 +93,12 @@
                 $juego->addChild('precio', $precio);
                 $juego->addChild('desarrollador', $desarrollador);
                 $juego->addChild('web', $web);
+                $juego->addChild('descripcion', $descripcion);
                 $juego->addChild('imagen', $imagen);
-
-                // Añadir las plataformas
-                $plataformasNode = $juego->addChild('plataformas');
-                foreach ($plataformas as $plataforma) {
-                    $plataformasNode->addChild('plataforma', $plataforma);
-                }
-
-                // Añadir los idiomas
-                $idiomasNode = $juego->addChild('idiomas');
-                foreach ($idiomas as $idioma) {
-                    $idiomasNode->addChild('idioma', $idioma);
-                }
-
-                // Añadir la clasificación
-                $clasificacionNode = $juego->addChild('clasificación');
-                foreach ($clasificacion as $edad) {
-                    $clasificacionNode->addChild('edad', $edad);
-                }
-
-                // Añadir las versiones
-                $versionesNode = $juego->addChild('versiones');
-                foreach ($versiones as $version) {
-                    $versionesNode->addChild('version', $version);
-                }
+                $juego->addChild('plataforma', $plataforma);
+                $juego->addChild('idioma', $idioma);
+                $juego->addChild('clasificacion', $clasificacion);
+                $juego->addChild('version', $version);
 
                 // Guardar los cambios en el archivo XML
                 $xml->asXML($cargarXml);

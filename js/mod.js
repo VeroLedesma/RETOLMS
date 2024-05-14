@@ -1,4 +1,4 @@
-let nombre, categoria, precio, desarrollador, imagen, website, plataformas, idiomas, genero, clasificacion, version;
+let id, nombre, categoria, precio, desarrollador, imagen, website, descripcion, plataforma, plataformaidioma, genero, clasificacion, version;
 const guardar = document.getElementById('guardar');
 // Alta de datos
 guardar.addEventListener('click', (event) => {
@@ -6,20 +6,22 @@ guardar.addEventListener('click', (event) => {
     event.preventDefault();
 
     // Obtengo el contenido de las variables
+    id = document.querySelector('input[name="id"]').value;
     nombre = document.querySelector('input[name="nombre"]').value;
     categoria = document.querySelector('select[name="categoria"]').value;
     genero = document.querySelector('input[name="genero"]').value;
     precio = document.querySelector('input[name="precio"]').value;
-    desarrollador = document.querySelector('select[name="desarrolladores"]').value;
+    desarrollador = document.querySelector('select[name="desarrollador"]').value;
     imagen = document.querySelector('input[type="file"]').files[0];
-    website = document.querySelector('input[name="website"]').value;
-    plataformas = document.querySelector('select[name="plataformas"]').value;
-    idiomas = document.querySelector('select[name="idiomas"]').value;
+    website = document.querySelector('input[name="web"]').value;
+    descripcion = document.querySelector('input[name="descripcion"]').value;
+    plataforma = document.querySelector('select[name="plataforma"]').value;
+    plataformaidioma = document.querySelector('select[name="idioma"]').value;
     clasificacion = document.querySelector('select[name="clasificacion"]').value;
     version = document.querySelector('input[name="version"]:checked');
 
     // Compruebo que los campos no esten vacios
-    if (nombre === '' || categoria === '' || precio === '' || desarrollador === '' || !imagen || website === '') {
+    if (id === '' || nombre === '' || categoria === '' || precio === '' || desarrollador === '' || !imagen || website === '') {
         alert('No pueden estar los campos vacios');
         return;
     }
@@ -35,6 +37,7 @@ guardar.addEventListener('click', (event) => {
 
     // Crear un objeto FormData y añadir los datos del formulario
     let formData = new FormData();
+    formData.append('id', id);
     formData.append('nombre', nombre);
     formData.append('categoria', categoria);
     formData.append('genero', genero);
@@ -42,8 +45,9 @@ guardar.addEventListener('click', (event) => {
     formData.append('desarrollador', desarrollador);
     formData.append('imagen', imagen);
     formData.append('web', website);
-    formData.append('plataformas', plataformas);
-    formData.append('idiomas', idiomas);
+    formData.append('descripcion', descripcion);
+    formData.append('plataforma', plataforma);
+    formData.append('idioma', plataformaidioma);
     formData.append('clasificacion', clasificacion);
     formData.append('version', version);
 

@@ -11,15 +11,51 @@
                                 <xs:complexType>
                                     <xs:sequence>
                                         <xs:element name="nombre" type="xs:string"/>
-                                        <xs:element name="categoria" type="xs:string"/>
                                         <xs:element name="genero" type="xs:string"/>
                                         <xs:element name="precio" type="xs:string"/>
-                                        <xs:element name="desarrollador" type="xs:string"/>
+                                        <xs:element name="desarrollador">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="EA"/>
+                                                    <xs:enumeration value="Ubisoft"/>
+                                                    <xs:enumeration value="Arcane"/>
+                                                    <xs:enumeration value="Mojang Studios"/>
+                                                    <xs:enumeration value="Activision"/>
+                                                    <xs:enumeration value="Larian Studios"/>
+                                                    <xs:enumeration value="Nintendo"/>
+                                                    <xs:enumeration value="Bethesda"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
                                         <xs:element name="web" type="xs:string"/>
                                         <xs:element name="descripcion" type="xs:string" minOccurs="0"/>
                                         <xs:element name="imagen" type="xs:string"/>
-                                        <xs:element name="plataforma" type="xs:string"/>
-                                        <xs:element name="idioma" type="xs:string"/>
+                                        <xs:element name="plataforma">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="PlayStation 4"/>
+                                                    <xs:enumeration value="PlayStation 5"/>
+                                                    <xs:enumeration value="Xbox One"/>
+                                                    <xs:enumeration value="PC"/>
+                                                    <xs:enumeration value="Nintendo Switch"/>
+                                                    <xs:enumeration value="iOS"/>
+                                                    <xs:enumeration value="WII"/>
+                                                    <xs:enumeration value="Android"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="idioma">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="Español"/>
+                                                    <xs:enumeration value="Inglés"/>
+                                                    <xs:enumeration value="Ruso"/>
+                                                    <xs:enumeration value="Alemán"/>
+                                                    <xs:enumeration value="Portugues"/>
+                                                    <xs:enumeration value="Chino"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
                                         <xs:element name="clasificacion" type="xs:string"/>
                                         <xs:element name="version" type="xs:string"/>
                                     </xs:sequence>
@@ -37,7 +73,15 @@
                                     <xs:sequence>
                                         <xs:element name="nombre" type="xs:string"/>
                                         <xs:element name="icono" type="xs:string"/>
-                                        <xs:element name="genero" type="xs:string" maxOccurs="unbounded"/>
+                                        <xs:element name="genero" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute name="id" type="xs:string" use="required"/>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
                                     </xs:sequence>
                                     <xs:attribute name="id" type="xs:string" use="required"/>
                                 </xs:complexType>

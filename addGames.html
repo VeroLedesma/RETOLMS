@@ -70,8 +70,12 @@
                 <div class="main__content">
                     <div class="main__settings-form">
                         <form method="post">
+                            <label class="main__input-label" for="ID">ID:</label>
+                            <input class="main__input" placeholder="ID del videojuego" type="text" name="id">
                             <label class="main__input-label" for="Nombre">Nombre:</label>
                             <input class="main__input" placeholder="Nombre del videojuego" type="text" name="nombre">
+                            <label class="main__input-label" for="Descripción">Descripción:</label>
+                            <input class="main__input" placeholder="Descripcion del videojuego" type="text" name="descripcion">
                             <label class="main__input-label" for="Genero">Genero:</label>
                             <input class="main__input" placeholder="Genero del videojuego" type="text" name="genero">
                             <label class="main__input-label" for="Categoria">Categoria:</label>
@@ -86,7 +90,7 @@
                             <label class="main__input-label" for="Precio">Precio:</label>
                             <input class="main__input" placeholder="Precio del videojuego" type="text" name="precio">
                             <label class="main__input-label" for="Desarrollador">Desarrollador</label>
-                            <select name="desarrolladores" id="developers">
+                            <select name="desarrollador" id="developers">
                                 <option value="EA">EA</option>
                                 <option value="Ubisoft">Ubisoft</option>
                                 <option value="Arcane">Arcane</option>
@@ -97,11 +101,11 @@
                                 <option value="Bethesda">Bethesda</option>
                             </select>
                             <label class="main__input-label" for="WEB">WEB:</label>
-                            <input class="main__input" placeholder="Web del videojuego" type="text" name="website">
+                            <input class="main__input" placeholder="Web del videojuego" type="text" name="web">
                             <label class="main__input-label" for="Imagen">Imagen de portada:</label>
                             <input class="main__input" type="file" name="imagen">
                             <label class="main__input-label" for="Imagen">Plataforma del videojuego:</label>
-                            <select name="plataformas" id="platforms">
+                            <select name="plataforma" id="platforms">
                                 <option value="PlayStation 4">PlayStation 4</option>
                                 <option value="PlayStation 5">PlayStation 5</option>
                                 <option value="Xbox One">Xbox One</option>
@@ -112,7 +116,7 @@
                                 <option value="Android">Android</option>
                             </select>
                             <label class="main__input-label" for="Idiomas">Idiomas del videojuego:</label>
-                            <select name="idiomas" id="languages">
+                            <select name="idioma" id="languages">
                                 <option value="Español">Español</option>
                                 <option value="Inglés">Inglés</option>
                                 <option value="Ruso">Ruso</option>
