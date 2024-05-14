@@ -16,10 +16,10 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css" />
 
     <!-- JS -->
-    <script src="js/mejora.js?v=243" defer></script>
+    <script type="text/javascript" src="../js/mejora.js"></script>
 </head>
 
-<body>
+<body onload="recibirRespuesta()">
     <div class="container">
         <!-- Sidebar Section -->
         <div class="sidebar">
@@ -69,9 +69,8 @@
                 </div>
                 <div class="main__content">
                     <div class="main__settings-form">
-                        <form method="post">
-                            <!-- Hidden input field to include the ID -->
-                            <input placeholder="ID del videojuego" type="text" id="codigoJuego" name="id" style="display: none;">
+                        <form id="formJuego" name="formJuego">
+                            <input placeholder="ID del videojuego" type="text" id="codigoJuego" name="codigoJuego" />
                             <label for="Nombre">Nombre:</label>
                             <input placeholder="Nombre del videojuego" type="text" name="nombre" id="nombre">
                             <label for="Descripción">Descripción:</label>
@@ -87,42 +86,9 @@
                             </select>
                             <label for="Precio">Precio:</label>
                             <input placeholder="Precio del videojuego" type="text" name="precio" id="precio" />
-                            <label for="Desarrollador">Desarrollador</label>
-                            <select id="desarrollador" name="desarrollador">
-                                <option value="EA">EA</option>
-                                <option value="Ubisoft">Ubisoft</option>
-                                <option value="Arcane">Arcane</option>
-                                <option value="Mojang Studios">Mojang Studios</option>
-                                <option value="Activision">Activision</option>
-                                <option value="Larian Studios">Larian Studios</option>
-                                <option value="Nintendo">Nintendo</option>
-                                <option value="Bethesda">Bethesda</option>
-                            </select>
-                            <label for="WEB">WEB:</label>
-                            <input placeholder="Web del videojuego" type="text" name="web" id="web">
-                            <label for="Imagen">Imagen de portada:</label>
-                            <input type="file" name="imagen" id="imagen" accept="image/*">
-                            <label for="Imagen">Plataforma del videojuego:</label>
-                            <select id="plataforma" name="plataforma">
-                                <option value="PlayStation 4">PlayStation 4</option>
-                                <option value="PlayStation 5">PlayStation 5</option>
-                                <option value="Xbox One">Xbox One</option>
-                                <option value="PC">PC</option>
-                                <option value="Nintendo Switch">Nintendo Switch</option>
-                                <option value="iOS">iOS</option>
-                                <option value="WII">WII</option>
-                                <option value="Android">Android</option>
-                                <option value="Nintendo DS">Nintendo DS</option>
-                                <option value="PSP">PSP</option>
-                            </select>
-                            <label for="Clasificacion">Clasificacion edad del videojuego:</label>
-                            <select id="clasificacion" name="clasificacion">
-                                <option value="+16 años"> +16 años </option>
-                                <option value="+18 años"> +18 años </option>
-                            </select>
                         </form>
                         <div id="errores"></div>
-                        <button type="button" class="btn main__save-button" id="guardar">Guardar</button>
+                        <button type="button" class="btn main__save-button" id="enviarGame" onclick="enviarDatos();">Guardar</button>
                         <button class="btn main__cancel-button">Cancelar</button>
                     </div>
                 </div>

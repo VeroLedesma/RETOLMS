@@ -1,0 +1,36 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="tienda">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="juegos">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="juego" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre" type="xs:string"/>
+                                        <xs:element name="descripcion" type="xs:string"/>
+                                        <xs:element name="genero" type="generosType" />
+                                        <xs:element name="precio" type="xs:string"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:simpleType name="generosType">
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Accion"/>
+                        <xs:enumeration value="Aventura"/>
+                        <xs:enumeration value="Carreras"/>
+                        <xs:enumeration value="Sandbox"/>
+                        <xs:enumeration value="Role-Playing"/>
+                        <xs:enumeration value="Estrategia"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
