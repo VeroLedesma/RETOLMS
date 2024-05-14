@@ -155,14 +155,14 @@ header {
   margin: 0 auto;
 }
 
-.main__input-label {
+.main__settings-form label {
   font-size: 80%;
   color: #C4C1C9;
   display: block;
   margin: 5px 5px 5px 5px;
 }
 
-.main__input, select {
+.main__settings-form input[type='text'], .main__settings-form input[type='file'], .main__settings-form select {
   display: inline-block;
   width: 100%;
   border: 1px solid #F1F3F5;
@@ -178,7 +178,7 @@ header {
   margin-bottom: 20px;
 }
 
-.main__input:focus {
+.main__settings-form input[type='text']:focus, .main__settings-form input[type='file']:focus {
   border: 1px solid #348AA7;
   transition: all 0.3s ease;
 }
