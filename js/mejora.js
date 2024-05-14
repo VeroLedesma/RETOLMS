@@ -4,23 +4,23 @@
  */
 
 // Variables
-let nombre, genero, plataforma, desarrollador, web, clasificacion, precio, imagen, descripcion, errores, guardar, codigo;
+let nombre, genero, plataforma, desarrollador, web, clasificacion, precio, imagen, descripcion, errores, codigo;
 
-nombre = document.getElementById('nombre').value;
-descripcion = document.getElementById('descripcion').value;
-genero = document.getElementById('genero').value;
-precio = document.getElementById('precio').value;
-desarrollador = document.getElementById('desarrollador').value;
-web = document.getElementById('web').value;
-plataforma = document.getElementById('plataforma').value;
-clasificacion = document.getElementById('clasificacion').value;
-imagen = document.getElementById('imagen').value;
-errores = document.getElementById('errores');
-guardar = document.getElementById('guardar');
-codigoJuego = document.getElementById('codigoJuego').value;
+// Se define un objeto 'campos' con las claves correspondientes a los nombres de los campos del formulario
+let campos = {
+    'nombre': nombre,
+    'descripcion': descripcion,
+    'genero': genero,
+    'precio': precio,
+    'desarrollador': desarrollador,
+    'web': web,
+    'imagen': imagen,
+    'plataforma': plataforma,
+    'clasificacion': clasificacion
+};
 
 // Recoger el archivo XML y analizarlo para hacer que el ID sea autoincremental
-fetch('../server/xml/database.xml')
+fetch('./server/xml/database.xml')
     .then(response => response.text())
     .then(data => {
         const parser = new DOMParser();
@@ -38,29 +38,36 @@ fetch('../server/xml/database.xml')
     .catch(error => console.error('Error fetching XML:', error)
 );
 
-// Se define un objeto 'campos' con las claves correspondientes a los nombres de los campos del formulario
-let campos = {
-    'id': codigoJuego,
-    'nombre': nombre,
-    'descripcion': descripcion,
-    'genero': genero,
-    'precio': precio,
-    'desarrollador': desarrollador,
-    'web': web,
-    'imagen': imagen,
-    'plataforma': plataforma,
-    'clasificacion': clasificacion
-};
-
 // Alta de datos
+const guardar = document.getElementById('guardar');
+
 guardar.addEventListener('click', (event) => {
     console.log('me han clicado');
     event.preventDefault();
 
-    // Llamar a la función de comprobación
-    if (!comprobarCampos(campos)) {
-        return;
-    }
+    // Asignar los valores de los campos del formulario a las variables
+    nombre = document.getElementById('nombre').value;
+    descripcion = document.getElementById('descripcion').value;
+    genero = document.getElementById('genero').value;
+    precio = document.getElementById('precio').value;
+    desarrollador = document.getElementById('desarrollador').value;
+    web = document.getElementById('web').value;
+    plataforma = document.getElementById('plataforma').value;
+    clasificacion = document.getElementById('clasificacion').value;
+    imagen = document.getElementById('imagen').value;
+    errores = document.getElementById('errores');
+    codigoJuego = document.getElementById('codigoJuego').value;
+
+    // Actualizar los valores de 'campos'
+    campos.nombre = nombre;
+    campos.descripcion = descripcion;
+    campos.genero = genero;
+    campos.precio = precio;
+    campos.desarrollador = desarrollador;
+    campos.web = web;
+    campos.imagen = imagen;
+    campos.plataforma = plataforma;
+    campos.clasificacion = clasificacion;
 
     let xhr = new XMLHttpRequest();
     xhr.open('POST', 'http://localhost/RETOLMS/server/InsertMejora.php', true);
@@ -90,28 +97,26 @@ function envioFormulario(xhr,formData){
             }
         }
     }
-    borrado();
     xhr.send(formData);
 }
 
 // Función para validar los campos del formulario
-function comprobarCampos() {
-    // Se itera sobre cada campo en el objeto 'campos'.
-    for (let campo in campos) {
-        // Si el valor del campo actual es una cadena vacía, se muestra un mensaje de error y se detiene la ejecución de la función.
-        if (campos[campo] === '') {
-            errores.innerHTML = `El campo ${campo} no puede estar vacío.`;
-            return false;
-        }
-    }
+// function comprobarCampos() {
+//     // Se itera sobre cada campo en el objeto 'campos'.
+//     for (let campo in campos) {
+//         // Si el valor del campo actual es una cadena vacía, se muestra un mensaje de error y se detiene la ejecución de la función.
+//         if (campos[campo] === '') {
+//             errores.innerHTML = `El campo ${campo} no puede estar vacío.`;
+//             return false;
+//         }
+//     }
 
-    // Si todo está correcto, se envía el formulario
-    return true;
-}
+//     // Si todo está correcto, se envía el formulario
+//     return true;
+// }
 
 // Función para borrar los datos de los campos
 function borrado() {
-    codigoJuego.value = '';
     nombre.value = '';
     descripcion.value = '';
     genero.value = '';

@@ -1,5 +1,5 @@
 <?php
-    require_once("/BDConexion.php");
+    require_once('BDConexion.php');
 
     // Comprobar si la solicitud es POST
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
