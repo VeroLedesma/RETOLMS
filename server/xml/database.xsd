@@ -1,0 +1,82 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="tienda">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="juegos">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="juego" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre" type="xs:string"/>
+                                        <xs:element name="descripcion" type="xs:string"/>
+                                        <xs:element name="genero">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="Accion"/>
+                                                    <xs:enumeration value="Aventura"/>
+                                                    <xs:enumeration value="Carreras"/>
+                                                    <xs:enumeration value="Sandbox"/>
+                                                    <xs:enumeration value="Role-Playing"/>
+                                                    <xs:enumeration value="Estrategia"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="precio" type="xs:string"/>
+                                        <xs:element name="desarrollador">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="EA"/>
+                                                    <xs:enumeration value="Ubisoft"/>
+                                                    <xs:enumeration value="Arcane"/>
+                                                    <xs:enumeration value="Mojang Studios"/>
+                                                    <xs:enumeration value="Activision"/>
+                                                    <xs:enumeration value="Larian Studios"/>
+                                                    <xs:enumeration value="Nintendo"/>
+                                                    <xs:enumeration value="Bethesda"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="web" type="xs:string"/>
+                                        <xs:element name="imagen" type="xs:string"/>
+                                        <xs:element name="plataformas">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="plataforma" maxOccurs="unbounded">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:string">
+                                                                <xs:enumeration value="PlayStation 3"/>
+                                                                <xs:enumeration value="PlayStation 4"/>
+                                                                <xs:enumeration value="PlayStation 5"/>
+                                                                <xs:enumeration value="Xbox One"/>
+                                                                <xs:enumeration value="PC"/>
+                                                                <xs:enumeration value="Nintendo Switch"/>
+                                                                <xs:enumeration value="iOS"/>
+                                                                <xs:enumeration value="WII"/>
+                                                                <xs:enumeration value="Android"/>
+                                                                <xs:enumeration value="Nintendo DS"/>
+                                                                <xs:enumeration value="PSP"/>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="clasificación">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="edad" type="xs:string"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

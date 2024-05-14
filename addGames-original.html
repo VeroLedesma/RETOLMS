@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css" />
 
     <!-- JS -->
-    <script src="js/mejora.js" defer></script>
+    <script src="js/mod.js" defer></script>
 </head>
 
 <body>
@@ -70,14 +70,16 @@
                 <div class="main__content">
                     <div class="main__settings-form">
                         <form method="post">
-                            <!-- Hidden input field to include the ID -->
-                            <input placeholder="ID del videojuego" type="text" id="codigoJuego" name="id" style="display: none;">
-                            <label for="Nombre">Nombre:</label>
-                            <input placeholder="Nombre del videojuego" type="text" name="nombre" id="nombre">
-                            <label for="Descripción">Descripción:</label>
-                            <input placeholder="Descripcion del videojuego" type="text" name="descripcion" id="descripcion">
-                            <label for="Genero">Genero:</label>
-                            <select id="genero" name="genero">
+                            <label class="main__input-label" for="ID">ID:</label>
+                            <input class="main__input" placeholder="ID del videojuego" type="text" name="id">
+                            <label class="main__input-label" for="Nombre">Nombre:</label>
+                            <input class="main__input" placeholder="Nombre del videojuego" type="text" name="nombre">
+                            <label class="main__input-label" for="Descripción">Descripción:</label>
+                            <input class="main__input" placeholder="Descripcion del videojuego" type="text" name="descripcion">
+                            <label class="main__input-label" for="Genero">Genero:</label>
+                            <input class="main__input" placeholder="Genero del videojuego" type="text" name="genero">
+                            <label class="main__input-label" for="Categoria">Categoria:</label>
+                            <select name="categoria" id="category">
                                 <option value="Accion">Acción</option>
                                 <option value="Aventura">Aventura</option>
                                 <option value="Carreras">Carreras</option>
@@ -85,10 +87,10 @@
                                 <option value="Role-Playing">Role-Playing</option>
                                 <option value="Estrategia">Estrategia</option>
                             </select>
-                            <label for="Precio">Precio:</label>
-                            <input placeholder="Precio del videojuego" type="text" name="precio" id="precio" />
-                            <label for="Desarrollador">Desarrollador</label>
-                            <select id="desarrollador" name="desarrollador">
+                            <label class="main__input-label" for="Precio">Precio:</label>
+                            <input class="main__input" placeholder="Precio del videojuego" type="text" name="precio">
+                            <label class="main__input-label" for="Desarrollador">Desarrollador</label>
+                            <select name="desarrollador" id="developers">
                                 <option value="EA">EA</option>
                                 <option value="Ubisoft">Ubisoft</option>
                                 <option value="Arcane">Arcane</option>
@@ -98,12 +100,12 @@
                                 <option value="Nintendo">Nintendo</option>
                                 <option value="Bethesda">Bethesda</option>
                             </select>
-                            <label for="WEB">WEB:</label>
-                            <input placeholder="Web del videojuego" type="text" name="web" id="web">
-                            <label for="Imagen">Imagen de portada:</label>
-                            <input type="file" name="imagen" id="imagen" accept="image/*">
-                            <label for="Imagen">Plataforma del videojuego:</label>
-                            <select id="plataforma" name="plataforma">
+                            <label class="main__input-label" for="WEB">WEB:</label>
+                            <input class="main__input" placeholder="Web del videojuego" type="text" name="web">
+                            <label class="main__input-label" for="Imagen">Imagen de portada:</label>
+                            <input class="main__input" type="file" name="imagen">
+                            <label class="main__input-label" for="Imagen">Plataforma del videojuego:</label>
+                            <select name="plataforma" id="platforms">
                                 <option value="PlayStation 4">PlayStation 4</option>
                                 <option value="PlayStation 5">PlayStation 5</option>
                                 <option value="Xbox One">Xbox One</option>
@@ -112,14 +114,27 @@
                                 <option value="iOS">iOS</option>
                                 <option value="WII">WII</option>
                                 <option value="Android">Android</option>
-                                <option value="Nintendo DS">Nintendo DS</option>
-                                <option value="PSP">PSP</option>
                             </select>
-                            <label for="Clasificacion">Clasificacion edad del videojuego:</label>
-                            <select id="clasificacion" name="clasificacion">
+                            <label class="main__input-label" for="Idiomas">Idiomas del videojuego:</label>
+                            <select name="idioma" id="languages">
+                                <option value="Español">Español</option>
+                                <option value="Inglés">Inglés</option>
+                                <option value="Ruso">Ruso</option>
+                                <option value="Alemán">Alemán</option>
+                                <option value="Portugues">Portugues</option>
+                                <option value="Chino">Chino</option>
+                            </select>
+                            <label class="main__input-label" for="Clasificacion">Clasificacion edad del videojuego:</label>
+                            <select name="clasificacion" id="clasification">
                                 <option value="+16 años"> +16 años </option>
                                 <option value="+18 años"> +18 años </option>
                             </select>
+                            <label class="main__input-label" for="Version">Version del videojuego:</label>
+                            <div class="version-game">
+                                <input type="radio" value="2D" name="version" /> 2D
+                                <input type="radio" value="3D" name="version" /> 3D
+                            </div>
+
                         </form>
                         <button type="button" class="btn main__save-button" id="guardar">Guardar</button>
                         <button class="btn main__cancel-button">Cancelar</button>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="database.xsd"?>
+<?xml-stylesheet type="text/xsl" href="tienda.xsl"?>
+<tienda>
+    <juegos>
+        <juego id="A01">
+            <nombre>Animal Crossing</nombre>
+            <descripcion> Descripción del juego </descripcion>
+            <genero>Role-Playing</genero>
+            <precio>30$</precio>
+            <desarrollador>EA</desarrollador>
+            <web>wwww.animalCrossing.com</web>
+            <imagen>animalCrosing.jpg</imagen>
+            <plataformas>
+                <plataforma>Nintendo Switch</plataforma>
+                <plataforma>Nintendo DS</plataforma>
+            </plataformas>
+            <clasificación>
+                <edad> +18 años </edad>
+            </clasificación>
+        </juego>
+
+        <juego id="B02">
+            <nombre>Zelda</nombre>
+            <descripcion> Descripción del juego </descripcion>
+            <genero>Aventura</genero>
+            <precio>80$</precio>
+            <desarrollador>EA</desarrollador>
+            <web>wwww.Zelda.com</web>
+            <imagen>Zelda.jpg</imagen>
+            <plataformas>
+                <plataforma>PSP</plataforma>
+                <plataforma>PlayStation 3</plataforma>
+            </plataformas>
+            <clasificación>
+                <edad> +18 años </edad>
+            </clasificación>
+        </juego>
+
+        <juego id="C03">
+            <nombre>Mario Kart</nombre>
+            <descripcion> Descripción del juego </descripcion>
+            <genero>Carreras</genero>
+            <precio>50$</precio>
+            <desarrollador>Nintendo</desarrollador>
+            <web>wwww.mariokart.com</web>
+            <imagen>marioKart.jpg</imagen>
+            <plataformas>
+                <plataforma>WII</plataforma>
+                <plataforma>Nintendo Switch</plataforma>
+            </plataformas>
+            <clasificación>
+                <edad> +18 años </edad>
+            </clasificación>
+        </juego>
+
+        <juego id="D04">
+            <nombre>Call of Duty: Warzone</nombre>
+            <descripcion> Descripción del juego </descripcion>
+            <genero>Accion</genero>
+            <precio>60$</precio>
+            <desarrollador>Activision</desarrollador>
+            <web>www.callofduty.com/warzone</web>
+            <imagen>warzone.jpg</imagen>
+            <plataformas>
+                <plataforma>PlayStation 4</plataforma>
+                <plataforma>Xbox One</plataforma>
+                <plataforma>PC</plataforma>
+            </plataformas>
+            <clasificación>
+                <edad> +16 años </edad>
+            </clasificación>
+        </juego>
+
+        <juego id="E05">
+            <nombre>Minecraft</nombre>
+            <descripcion> Descripción del juego</descripcion>
+            <genero>Aventura</genero>
+            <precio>
+            25$</precio>
+            <desarrollador>Mojang Studios</desarrollador>
+            <web>www.minecraft.net</web>
+            <imagen>minecraft.jpg</imagen>
+            <plataformas>
+                <plataforma>PC</plataforma>
+                <plataforma>PlayStation 4</plataforma>
+                <plataforma>Xbox One</plataforma>
+                <plataforma>Nintendo Switch</plataforma>
+                <plataforma>iOS</plataforma>
+                <plataforma>Android</plataforma>
+            </plataformas>
+            <clasificación>
+                <edad> +16 años </edad>
+            </clasificación>
+        </juego>
+
+        <juego id="F06">
+            <nombre>Assassin's Creed: Valhalla</nombre>
+            <descripcion> Descripción del juego</descripcion>
+            <genero>Estrategia</genero>
+            <precio>70$</precio>
+            <desarrollador>Ubisoft</desarrollador>
+            <web>www.assassinscreed.com</web>
+            <imagen>valhalla.jpg</imagen>
+            <plataformas>
+                <plataforma>PlayStation 4</plataforma>
+                <plataforma>PlayStation 5</plataforma>
+                <plataforma>Xbox One</plataforma>
+                <plataforma>PC</plataforma>
+            </plataformas>
+            <clasificación>
+                <edad> +16 años </edad>
+            </clasificación>
+        </juego>
+    </juegos>
+</tienda>
