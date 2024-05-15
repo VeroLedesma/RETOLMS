@@ -42,7 +42,7 @@ try {
 
     header("Location: ");
     exit();
-} catch(Exception e) {
+} catch(Exception $e) {
     $output = "Error: " . $e->getMessage();
     echo $output;
 }

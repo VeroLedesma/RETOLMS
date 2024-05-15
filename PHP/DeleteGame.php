@@ -11,15 +11,19 @@ try {
     fclose($fichero);
     
     // Crear sesion
-    $session = new Session();    
+    $session = new Session();
+
     // Abrir y el nombre de la base de datos en el servidor BaseX
     $session->execute("open universidad"); 
+
     // xquery
     $query = $session->query($xq);
-    $query->bind('$views', $_GET["views"]);
-    $query->bind('$movies', $_GET["movies"]);
-    $query->bind('$rating', $_GET["rating"]);
-
+    $query->bind('$codigoJuego',$_GET["codigoJuego"]);
+    $query->bind('$nombre', $_GET["nombre"]);
+    $query->bind('$descripcion', $_GET["descripcion"]);
+    $query->bind('$genero',$_GET["genero"]);
+    $query->bind('$precio',$_GET["precio"]);
+    
     // Ejecutar la consulta
     $result = $query->execute();
 
@@ -41,4 +45,6 @@ try {
     $proc = new XSLTProcessor;
     $proc->importStyleSheet($xsl);
 
+} catch(Exception $e) {
+    echo $e->getMessage();
 }

@@ -6,11 +6,24 @@
     <title>Legends Store - Game Store</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/default.css" />
-    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="../assets/css/default.css" />
+    <link rel="stylesheet" href="../assets/css/index.css" />
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css" />
+
+    <script>
+        function Transformar() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("special-offerts").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "../PHP/BDAccess.php", true);
+            xhttp.send();
+        }
+    </script>
 </head>
 
 <body>
@@ -79,34 +92,11 @@
 
                 <section class="special-offerts">
                     <div class="header">
-                        <h3>Ofertas especiales</h3>
-                        <button>Mostrar más</button>
+                        <h3>Juegos nuevos agregados</h3>
+                        <button type="button" onclick="Transformar()">Mostrar más</button>
                     </div>
-                    <div class="grid-container">
-                        <div class="item">
-                            <div class="item_footer">
-                                <h2>MIDWEEK DEAL</h2>
-                                <p>Offer ends 27 Nov @ 7:00pm.</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="item_footer">
-                                <h2>MIDWEEK DEAL</h2>
-                                <p>Offer ends 21 Nov @ 7:00pm.</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="item_offert">
-                                <h2>Project Hospital</h2>
-                                <p>DAILY DEAL! Offer ends 28 November</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="item_offert">
-                                <h2>Settlement Survival</h2>
-                                <p>DAILY DEAL! Offer ends 28 November</p>
-                            </div>
-                        </div>
+                    <div class="grid-container" id="special-offerts">
+
                     </div>
                 </section>
 
@@ -118,7 +108,7 @@
                     <div class="grid-container">
                         <div class="item">
                             <div class="video">
-                                <iframe width="560" height="208" src="https://www.youtube.com/embed/LRTOUqLmuAU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <iframe width="560" height="208" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                             <div class="title">
                                 <span class="live_steam_app">Victoria 3</span>
@@ -127,7 +117,7 @@
                         </div>
                         <div class="item">
                             <div class="video">
-                                <iframe width="560" height="208" src="https://www.youtube.com/embed/LRTOUqLmuAU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <iframe width="560" height="208" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                             <div class="title">
                                 <span class="live_steam_app">Victoria 3</span>
@@ -136,7 +126,7 @@
                         </div>
                         <div class="item">
                             <div class="video">
-                                <iframe width="560" height="208" src="https://www.youtube.com/embed/LRTOUqLmuAU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <iframe width="560" height="208" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                             <div class="title">
                                 <span class="live_steam_app">Victoria 3</span>
@@ -145,7 +135,7 @@
                         </div>
                         <div class="item">
                             <div class="video">
-                                <iframe width="560" height="208" src="https://www.youtube.com/embed/LRTOUqLmuAU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <iframe width="560" height="208" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                             <div class="title">
                                 <span class="live_steam_app">Victoria 3</span>
@@ -154,7 +144,7 @@
                         </div>
                         <div class="item">
                             <div class="video">
-                                <iframe width="560" height="208" src="https://www.youtube.com/embed/LRTOUqLmuAU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <iframe width="560" height="208" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                             <div class="title">
                                 <span class="live_steam_app">Victoria 3</span>
@@ -163,7 +153,7 @@
                         </div>
                         <div class="item">
                             <div class="video">
-                                <iframe width="560" height="208" src="https://www.youtube.com/embed/LRTOUqLmuAU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <iframe width="560" height="208" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                             <div class="title">
                                 <span class="live_steam_app">Victoria 3</span>
