@@ -3,6 +3,7 @@
 require_once("BDConexion.php");
 
 try {
+    $genero = $_GET['genero'];
 
     $rutaXq = "../XML/BaseDeDatos.xq";
     $fichero = fopen($rutaXq, "r"); // Abrimos el fichero $rutaXq en modo lectura "r"
@@ -34,6 +35,14 @@ try {
 
     $xml->load('../XML/resultado.xml');
 
+    // Filtra los juegos por género
+    if ($genero != 'all') {
+        $xpath = new DOMXPath($xml);
+        foreach ($xpath->query("/tienda/juegos/juego[genero!='$genero']") as $node) {
+            $node->parentNode->removeChild($node);
+        }
+    }
+
     $xsl = new DOMDocument;
 
     $xsl->load('../XSLT/listaJuegos.xsl');
@@ -41,6 +50,8 @@ try {
     $proc = new XSLTProcessor;
 
     $proc->importStyleSheet($xsl);
+
+    $proc->setParameter('', 'genero', $genero);
 
     echo $proc->transformToXML($xml);
 

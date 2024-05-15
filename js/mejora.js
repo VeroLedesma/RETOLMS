@@ -9,9 +9,11 @@ function enviarDatos() {
     var descripcion = document.getElementById('descripcion').value;
     var genero = document.getElementById('genero').value;
     var precio = document.getElementById('precio').value;
-    
+    var tipo = document.getElementById('tipo').value;
+    var publicado = document.getElementById('publicado').checked; // Esto será true si el checkbox está marcado, y false si no lo está
+
     // Verificar si algún campo está vacío
-    if (codigoJuego === '' || nombre === '' || descripcion === '' || genero === '' || precio === '') {
+    if (codigoJuego === '' || descripcion === '' || nombre === '' || genero === '' || precio === '' || tipo === '') {
         // Mostrar una alerta pidiendo al usuario que complete todos los campos
         alert("Por favor, complete todos los campos del formulario.");
     } else {

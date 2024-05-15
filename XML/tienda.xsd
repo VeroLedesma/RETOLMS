@@ -9,28 +9,43 @@
                                 <xs:complexType>
                                     <xs:sequence>
                                         <xs:element name="nombre" type="xs:string"/>
-                                        <xs:element name="descripcion" type="xs:string"/>
+                                        <xs:element name="descripcion" type="xs:string" minOccurs="0"/>
                                         <xs:element name="genero" type="generosType" />
                                         <xs:element name="precio" type="xs:string"/>
+                                        <xs:element name="tipo">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="2D"/>
+                                                    <xs:enumeration value="3D"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
                                     </xs:sequence>
-                                    <xs:attribute name="id" type="xs:string" use="required"/>
+                                    <xs:attribute name="id" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:pattern value="J[0-9]{3}"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                    <xs:attribute name="publicado" type="xs:boolean" use="optional" default="false"/>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-
-                <xs:simpleType name="generosType">
-                    <xs:restriction base="xs:string">
-                        <xs:enumeration value="Accion"/>
-                        <xs:enumeration value="Aventura"/>
-                        <xs:enumeration value="Carreras"/>
-                        <xs:enumeration value="Sandbox"/>
-                        <xs:enumeration value="Role-Playing"/>
-                        <xs:enumeration value="Estrategia"/>
-                    </xs:restriction>
-                </xs:simpleType>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+
+    <xs:simpleType name="generosType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Accion"/>
+            <xs:enumeration value="Aventura"/>
+            <xs:enumeration value="Carreras"/>
+            <xs:enumeration value="Sandbox"/>
+            <xs:enumeration value="Role-Playing"/>
+            <xs:enumeration value="Estrategia"/>
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>

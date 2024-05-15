@@ -1,46 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tienda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="tienda.xsd">
     <juegos>
-        <juego id="A01">
+        <juego id="A01" publicado="true">
             <nombre>Animal Crossing</nombre>
             <descripcion> Descripción del juego </descripcion>
             <genero>Role-Playing</genero>
-            <precio>30$</precio>
+            <precio>30</precio>
         </juego>
 
-        <juego id="B02">
+        <juego id="B02" publicado="true">
             <nombre>Zelda</nombre>
             <descripcion> Descripción del juego </descripcion>
             <genero>Aventura</genero>
-            <precio>80$</precio>
+            <precio>80</precio>
         </juego>
 
-        <juego id="C03">
+        <juego id="C03" publicado="false">
             <nombre>Mario Kart</nombre>
             <descripcion> Descripción del juego </descripcion>
             <genero>Carreras</genero>
-            <precio>50$</precio>
+            <precio>50</precio>
         </juego>
 
-        <juego id="D04">
+        <juego id="D04" publicado="true">
             <nombre>Call of Duty: Warzone</nombre>
             <descripcion> Descripción del juego </descripcion>
             <genero>Accion</genero>
-            <precio>60$</precio>
+            <precio>60</precio>
         </juego>
 
-        <juego id="E05">
+        <juego id="E05" publicado="false">
             <nombre>Minecraft</nombre>
             <descripcion> Descripción del juego</descripcion>
             <genero>Aventura</genero>
-            <precio>25$</precio>
+            <precio>25</precio>
         </juego>
 
-        <juego id="F06">
+        <juego id="F06" publicado="true">
             <nombre>Assassin's Creed: Valhalla</nombre>
             <descripcion> Descripción del juego</descripcion>
             <genero>Estrategia</genero>
             <precio>70$</precio>
+            <tipo>2D</tipo>
         </juego>
     </juegos>
     <generos>

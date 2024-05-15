@@ -15,12 +15,13 @@
     <script>
         function Transformar() {
             var xhttp = new XMLHttpRequest();
+            var genero = document.getElementById("genero").value;
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     document.getElementById("special-offerts").innerHTML = this.responseText;
                 }
             };
-            xhttp.open("GET", "../PHP/BDAccess.php", true);
+            xhttp.open("GET", "../PHP/BDAccess.php?genero=" + genero, true);
             xhttp.send();
         }
     </script>
@@ -93,6 +94,18 @@
                 <section class="special-offerts">
                     <div class="header">
                         <h3>Juegos nuevos agregados</h3>
+                        <!-- Juegos filtrados por categoría -->
+                        <select id="genero">
+                            <option value="all">Todos</option>
+                            <option value="Accion">Acción</option>
+                            <option value="Aventura">Aventura</option>
+                            <option value="Carreras">Carreras</option>
+                            <option value="Sandbox">Sandbox</option>
+                            <option value="Role-Playing">Role-Playing</option>
+                            <option value="Estrategia">Estrategia</option>
+                            <option value="Indie">Indie</option>
+                            <option value="Multijugador">Multijugador</option>
+                        </select>
                         <button type="button" onclick="Transformar()">Mostrar más</button>
                     </div>
                     <div class="grid-container" id="special-offerts">

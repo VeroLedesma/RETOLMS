@@ -13,11 +13,20 @@
                     <p><xsl:value-of select="descripcion"/></p>
                     <p>Género: <xsl:value-of select="genero"/></p>
                     <p>Precio: <xsl:value-of select="precio"/></p>
+                    <p>Tipo: <xsl:value-of select="tipo"/></p>
+                    <xsl:call-template name="publicado">
+                        <xsl:with-param name="publicado" select="@publicado"/>
+                    </xsl:call-template>
                 </div>
             </div>
         </xsl:for-each>
     </body>
     </html>
+</xsl:template>
+
+<xsl:template name="publicado">
+    <xsl:param name="publicado"/>
+    <p>Publicado: <xsl:value-of select="$publicado"/></p>
 </xsl:template>
 
 </xsl:stylesheet>

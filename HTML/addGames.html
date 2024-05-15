@@ -69,7 +69,7 @@
                 </div>
                 <div class="main__content">
                     <div class="main__settings-form">
-                        <form id="formJuego" name="formJuego">
+                        <form id="formJuego" name="formJuego" enctype="multipart/form-data">
                             <input placeholder="ID del videojuego" type="text" id="codigoJuego" name="codigoJuego" />
                             <label for="Nombre">Nombre:</label>
                             <input placeholder="Nombre del videojuego" type="text" name="nombre" id="nombre">
@@ -86,6 +86,18 @@
                             </select>
                             <label for="Precio">Precio:</label>
                             <input placeholder="Precio del videojuego" type="text" name="precio" id="precio" />
+                            <!-- <label for="imagen">Imagen:</label>
+                            <input type="file" id="imagen" name="imagen">
+                         -->
+                            <label for="tipo">Tipo:</label>
+                            <select id="tipo" name="tipo">
+                                <option value="2D">2D</option>
+                                <option value="3D">3D</option>
+                            </select>
+                        
+                            <label for="publicado">Publicado:</label>
+                            <input type="checkbox" id="publicado" name="publicado">
+                        
                         </form>
                         <div id="errores"></div>
                         <button type="button" class="btn main__save-button" id="enviarGame" onclick="enviarDatos();">Guardar</button>
