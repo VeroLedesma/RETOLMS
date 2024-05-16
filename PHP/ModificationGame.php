@@ -26,16 +26,21 @@ try {
 
     echo 'Valor seleccionado: '.$_GET["codigoJuego"].' '.$_GET["nombre"].' '.$_GET["descripcion"].' '.$_GET["genero"].' '.$_GET["precio"].'<br>';
 
-
     // Ejecutar la consulta
     $result = $query->execute();
 
     // Lanza la xquery
     $xmlSRT = $session->execute("xquery /");
 
-    $rutaXSLT = "";
+    // Define la ruta del archivo XSLT si planeas usarlo para transformar el XML
+    $rutaXSLT = "../XSLT/detailsGame.xsl";
+
+    // Carga el XML
     $xml = new DOMDocument;
     $xml->load($rutaXSLT);
+
+    // Define la variable $xsl y asigna la ruta correcta al archivo XSLT
+    $xsl = "";
 
     $proc = new XSLTProcessor;
     $proc->importStyleSheet($xsl);
@@ -53,3 +58,5 @@ try {
     $output = "Error: " . $e->getMessage();
     echo $output;
 }
+header("Location: ../HTML/modificarJuego.html?resultado=OK"); 
+?>
