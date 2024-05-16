@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-declare variable $views as xs:string external;
-declare variable $movies as xs:string external;
-declare variable $rating as xs:string external;
-
-let $id := //film[title = movies]/@id
-
-return (
-    replace value of node
-    /films/film[@id=$id]/ratings
-    with $rating,
-    replace value of node
-    /films/film[@id=$id]/views
-    with $views
-)
-=======
 declare variable $codigoJuego as xs:string external;
 declare variable $nombre as xs:string external;
 declare variable $descripcion as xs:string external;
@@ -48,4 +32,3 @@ return (
     /tienda/juegos/juego[@id=$id]/@publicado
     with $publicado
 )
->>>>>>> eb8a0721894bf1a1ce89b4d3af93bf36aaf1ac21

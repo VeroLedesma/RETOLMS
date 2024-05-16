@@ -14,10 +14,7 @@
                     <p>Género: <xsl:value-of select="genero"/></p>
                     <p>Precio: <xsl:value-of select="precio"/></p>
                     <p>Tipo: <xsl:value-of select="tipo"/></p>
-<<<<<<< HEAD
-=======
                     <p>Categoria: <xsl:value-of select="categoria"/></p>
->>>>>>> eb8a0721894bf1a1ce89b4d3af93bf36aaf1ac21
                     <xsl:call-template name="publicado">
                         <xsl:with-param name="publicado" select="@publicado"/>
                     </xsl:call-template>

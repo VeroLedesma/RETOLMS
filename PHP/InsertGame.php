@@ -26,10 +26,7 @@ try {
         $query->bind('$genero',$_GET["genero"]);
         $query->bind('$precio',$_GET["precio"]);
         $query->bind('$tipo',$_GET["tipo"]);
-<<<<<<< HEAD
-=======
         $query->bind('$categoria',$_GET["categoria"]);
->>>>>>> eb8a0721894bf1a1ce89b4d3af93bf36aaf1ac21
 
         echo 'Valor seleccionado: '.$_GET["codigoJuego"].' '.$_GET["nombre"].' '.$_GET["descripcion"].' '.$_GET["genero"].' '.$_GET["precio"].'<br>';
 

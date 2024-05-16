@@ -111,7 +111,7 @@ class Session {
     }
 }
 class Query {
-    var $session, $id, $open, $cache;
+    var $session, $id, $open, $cache, $pos;
     public function __construct($s, $q) {
         $this->session = $s;
         $this->id = $this->exec(chr(0), $q);
