@@ -1,6 +1,6 @@
 
 <?php
-require_once('BDCOnexion.php');
+require_once('BDConexion.php');
 
 try {
     $rutaXq = "../XQUERY/eliminar.xq";
@@ -15,7 +15,7 @@ try {
     $session = new Session();
 
     // Abrir y el nombre de la base de datos en el servidor BaseX
-    $session->execute("open universidad"); 
+    $session->execute("open tienda"); 
 
     // xquery
     $query = $session->query($xq);
@@ -24,6 +24,9 @@ try {
     $query->bind('$descripcion', $_GET["descripcion"]);
     $query->bind('$genero',$_GET["genero"]);
     $query->bind('$precio',$_GET["precio"]);
+    $query->bind('$tipo',$_GET["tipo"]);
+    $query->bind('$categoria',$_GET["categoria"]);
+
     
     // Ejecutar la consulta
     $result = $query->execute();
