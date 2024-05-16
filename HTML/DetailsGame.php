@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 <?php
 if (isset($_GET['id'])) {
      //Obtén el ID del juego del parámetro de la URL
+=======
+
+<?php
+    // Obtén el ID del juego del parámetro de la URL
+>>>>>>> eb8a0721894bf1a1ce89b4d3af93bf36aaf1ac21
     $id = $_GET['id'];
 
     // Carga el documento XML
@@ -19,6 +25,7 @@ if (isset($_GET['id'])) {
     $proc->setParameter('', 'id', $id);
 
     // Transforma el XML
+<<<<<<< HEAD
     $htmlOutput = $proc->transformToXML($xml);
 
     echo $htmlOutput;
@@ -34,3 +41,7 @@ if (isset($_GET['id'])) {
       }
    
 ?>
+=======
+    echo $proc->transformToXML($xml);
+?>
+>>>>>>> eb8a0721894bf1a1ce89b4d3af93bf36aaf1ac21

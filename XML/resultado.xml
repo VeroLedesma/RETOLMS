@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <tienda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="tienda.xsd">
     <juegos>
         <juego id="A01">
@@ -54,4 +55,86 @@
         <generos id="09">Musical</generos>
         <generos id="10">Plataformas</generos>
     </generos>
+=======
+<tienda>
+    <juegos>
+        <juego id="A001" publicado="true">
+            <nombre>Animal Crossing</nombre>
+            <descripcion>Descripción del juego</descripcion>
+            <genero>Accion</genero>
+            <precio>30</precio>
+            <tipo>3D</tipo>
+            <categoria>01</categoria>
+        </juego>
+
+        <juego id="B002" publicado="true">
+            <nombre>Zelda</nombre>
+            <descripcion>Descripción del juego</descripcion>
+            <genero>Aventura</genero>
+            <precio>80</precio>
+            <tipo>2D</tipo>
+            <categoria>01</categoria>
+        </juego>
+
+        <juego id="C003" publicado="false">
+            <nombre>Mario Kart</nombre>
+            <descripcion>Descripción del juego</descripcion>
+            <genero>Carreras</genero>
+            <precio>50</precio>
+            <tipo>3D</tipo>
+            <categoria>01</categoria>
+        </juego>
+
+        <juego id="D004" publicado="true">
+            <nombre>Call of Duty: Warzone</nombre>
+            <descripcion>Descripción del juego</descripcion>
+            <genero>Accion</genero>
+            <precio>60</precio>
+            <tipo>3D</tipo>
+            <categoria>01</categoria>
+        </juego>
+
+        <juego id="E005" publicado="false">
+            <nombre>Minecraft</nombre>
+            <descripcion>Descripción del juego</descripcion>
+            <genero>Aventura</genero>
+            <precio>25</precio>
+            <tipo>3D</tipo>
+            <categoria>02</categoria>
+        </juego>
+
+        <juego id="F006" publicado="true">
+            <nombre>Assassin's Creed: Valhalla</nombre>
+            <descripcion>Descripción del juego</descripcion>
+            <genero>Accion</genero>
+            <precio>70</precio>
+            <tipo>2D</tipo>
+            <categoria>02</categoria>
+        </juego>
+    <juego id="h003" publicado="on">
+      <nombre>EL NANO</nombre>
+      <descripcion>ASTURIAS</descripcion>
+      <genero>Accion</genero>
+      <precio>90</precio>
+      <tipo>2D</tipo>
+      <categoria>01</categoria>
+    </juego>
+    <juego id="h003" publicado="on">
+      <nombre>EL NANO</nombre>
+      <descripcion>kjhgfhjkukhjgfhjg</descripcion>
+      <genero>Estrategia</genero>
+      <precio>33</precio>
+      <tipo>2D</tipo>
+      <categoria>02</categoria>
+    </juego>
+  </juegos>
+    <categorias>
+        <categoria id="01">
+            <nombre>Nacional</nombre>
+        </categoria>
+        <categoria id="02">
+            <nombre>Internacional</nombre>
+        </categoria>
+    </categorias>
+>>>>>>> eb8a0721894bf1a1ce89b4d3af93bf36aaf1ac21
 </tienda>

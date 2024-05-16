@@ -20,6 +20,10 @@
                                                 </xs:restriction>
                                             </xs:simpleType>
                                         </xs:element>
+<<<<<<< HEAD
+=======
+                                        <xs:element name="categoria" type="categoriasType"/>
+>>>>>>> eb8a0721894bf1a1ce89b4d3af93bf36aaf1ac21
                                     </xs:sequence>
                                     <xs:attribute name="id" use="required">
                                         <xs:simpleType>
@@ -34,6 +38,24 @@
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
+<<<<<<< HEAD
+=======
+                <xs:element name="categorias">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="categoria" maxOccurs="unbounded">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Nacional"/>
+                                        <xs:enumeration value="Internacional"/>
+                                       
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+>>>>>>> eb8a0721894bf1a1ce89b4d3af93bf36aaf1ac21
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -43,9 +65,29 @@
             <xs:enumeration value="Accion"/>
             <xs:enumeration value="Aventura"/>
             <xs:enumeration value="Carreras"/>
+<<<<<<< HEAD
             <xs:enumeration value="Sandbox"/>
             <xs:enumeration value="Role-Playing"/>
             <xs:enumeration value="Estrategia"/>
         </xs:restriction>
     </xs:simpleType>
 </xs:schema>
+=======
+            <xs:enumeration value="Deportes"/>
+            <xs:enumeration value="Estrategia"/>
+            <xs:enumeration value="Simulacion"/>
+            <xs:enumeration value="Rol"/>
+            <xs:enumeration value="Puzzle"/>
+            <xs:enumeration value="Musical"/>
+            <xs:enumeration value="Plataformas"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="categoriasType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Nacional"/>
+            <xs:enumeration value="Internacional"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
+>>>>>>> eb8a0721894bf1a1ce89b4d3af93bf36aaf1ac21
