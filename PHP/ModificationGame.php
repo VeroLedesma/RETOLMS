@@ -23,29 +23,14 @@ try {
     $query->bind('$precio',$_GET["precio"]);
     $query->bind('$tipo',$_GET["tipo"]);
     $query->bind('$categoria',$_GET["categoria"]);
+    $query->bind('$publicado',$_GET["publicado"]);
 
     echo 'Valor seleccionado: '.$_GET["codigoJuego"].' '.$_GET["nombre"].' '.$_GET["descripcion"].' '.$_GET["genero"].' '.$_GET["precio"].'<br>';
 
     // Ejecutar la consulta
     $result = $query->execute();
 
-    // Lanza la xquery
-    $xmlSRT = $session->execute("xquery /");
-
-    // Define la ruta del archivo XSLT si planeas usarlo para transformar el XML
-    $rutaXSLT = "../XSLT/detailsGame.xsl";
-
-    // Carga el XML
-    $xml = new DOMDocument;
-    $xml->load($rutaXSLT);
-
-    // Define la variable $xsl y asigna la ruta correcta al archivo XSLT
-    $xsl = "";
-
-    $proc = new XSLTProcessor;
-    $proc->importStyleSheet($xsl);
-
-    echo $proc->transformToXML($xml);
+    
 
     // Close any database query if applicable
     $query->close();

@@ -1,3 +1,2 @@
-###
 
-POST http://localhost/RETOLMS/server/InsertGamePrueba.php
+POST http://localhost/RETOLMS/PHP/ModificationGame.php?codigoJuego=A001

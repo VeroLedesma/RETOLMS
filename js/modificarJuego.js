@@ -7,14 +7,15 @@ function modificarJuego() {
     var precio = document.getElementById("precio").value;
     var tipo = document.getElementById("tipo").value;
     var categoria = document.getElementById("categoria").value;
+    var publicado = document.getElementById('publicado').checked;
     
     if (codigoJuego === "" || nombre === "" || descripcion === "" || genero=== "" || precio === "" || tipo === ""|| categoria === "") {
         alert("Todos los campos deben estar completos");
         return; 
     }
 
-    var url = "../PHP/ModificationGame.php?codigoJuego=" + codigoJuego;
-    document.modificar.action = url;
-    document.modificar.method = "GET";
-    document.modificar.submit();
+    
+    document.formJuego.action = "../PHP/ModificationGame.php?codigoJuego=" + codigoJuego;
+    document.formJuego.method = "GET";
+    document.formJuego.submit();
 } 

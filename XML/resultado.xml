@@ -1,12 +1,12 @@
 <tienda>
     <juegos>
-        <juego id="A001" publicado="true">
-            <nombre>Animal Crossing</nombre>
-            <descripcion>Descripción del juego</descripcion>
+        <juego id="A001" publicado="on">
+            <nombre>EL NANO</nombre>
+            <descripcion>ASTURIAS</descripcion>
             <genero>Accion</genero>
-            <precio>30</precio>
-            <tipo>3D</tipo>
-            <categoria>01</categoria>
+            <precio>33</precio>
+            <tipo>2D</tipo>
+            <categoria>02</categoria>
         </juego>
 
         <juego id="B002" publicado="true">

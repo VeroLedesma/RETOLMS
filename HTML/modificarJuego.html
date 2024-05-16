@@ -19,7 +19,7 @@
     <script type="text/javascript" src="../js/modificarJuego.js"></script>
 </head>
 
-<body onload="recibirRespuesta()">
+<body>
     <div class="container">
         <!-- Sidebar Section -->
         <div class="sidebar">
@@ -100,13 +100,12 @@
                                 <option value="3D">3D</option>
                             </select>
                             <label for="categoria">Categoria:</label>
-                            <select id="catagoria" name="categoria">
+                            <select id="categoria" name="categoria">
                                 <option value="01">Nacional</option>
                                 <option value="02">Internacional</option>
                             </select>
                             <label for="publicado">Publicado:</label>
                             <input type="checkbox" id="publicado" name="publicado">
-                        
                         </form>
                         <div id="errores"></div>
                         <button type="button" class="btn main__save-button" id="modificarJuego" onclick="modificarJuego();">Modificar Juego </button>
