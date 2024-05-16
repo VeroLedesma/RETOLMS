@@ -16,10 +16,10 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css" />
 
     <!-- JS -->
-    <script type="text/javascript" src="../js/mejora.js"></script>
+    <script type="text/javascript" src="../js/borrarJuego.js"></script>
 </head>
 
-<body onload="recibirRespuesta()">
+<body>
     <div class="container">
         <!-- Sidebar Section -->
         <div class="sidebar">
@@ -46,13 +46,12 @@
                         <span>Ajustes</span>
                     </li>
                 </a>
-                
-                <a>
-                    <li class="active">
-                        <i class="fa-solid fa-plus"></i>
-                        <span>Agregar juego</span>
-                    </li>
-                </a>
+            </a>
+            <a href="./addGames.html">
+                <li>
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Agregar juego</span>
+                </li>
             </a>
             <a href="./modificarJuego.html">
                 <li>
@@ -61,14 +60,13 @@
                     <span>Modificar Juego</span>
                 </li>
             </a>
-            <a href="./borrarJuegos.html">
-                <li>
+            <a>
+                <li class="active">
                     <i class="fa-solid fa-trash"></i>
     
                     <span>Borrar Juego</span>
                 </li>
             </a>
-
             </ul>
         </div>
         <!-- ./Sidebar Section -->
@@ -76,18 +74,18 @@
 
     <div class="content">
         <header>
-            <h1>Inserción de Video-juegos</h1>
+            <h1>Borrar Video-juegos</h1>
         </header>
 
         <div class="container2">
             <div class="main">
                 <div class="main__header">
-                    <h2>Alta videojuego</h2>
+                    <h2>Borrado videojuego</h2>
                 </div>
                 <div class="main__content">
                     <div class="main__settings-form">
                         <form id="formJuego" name="formJuego" enctype="multipart/form-data">
-                            <input placeholder="ID del videojuego" type="text" id="codigoJuego" name="codigoJuego" />
+                            <input placeholder="ID del videojuego" type="text" id="id" name="id" />
                             <label for="Nombre">Nombre:</label>
                             <input placeholder="Nombre del videojuego" type="text" name="nombre" id="nombre">
                             <label for="Descripción">Descripción:</label>
@@ -123,10 +121,9 @@
                             </select>
                             <label for="publicado">Publicado:</label>
                             <input type="checkbox" id="publicado" name="publicado">
-                        
                         </form>
                         <div id="errores"></div>
-                        <button type="button" class="btn main__save-button" id="enviarGame" onclick="enviarDatos();">Guardar</button>
+                        <button type="button" class="btn main__save-button" id="borrarJuego" onclick="borrarJuego();">Borrar Juego </button>
                         <button class="btn main__cancel-button">Cancelar</button>
                     </div>
                 </div>

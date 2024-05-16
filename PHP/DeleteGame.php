@@ -1,51 +1,52 @@
+<h1>Se eliminó correctamente<h1>
+<?php 
 
-<?php
-require_once('BDCOnexion.php');
+require_once("BDconexion.php");
 
 try {
-    $rutaXq = "../XQUERY/eliminar.xq";
-    // Abrimos el fichero $rutaXq en modo lectura "r"
-    $fichero = fopen($rutaXq, "r"); 
-    // Leemos el contenido del fichero y lo guardamos en la variable $xq
-    $xq = fread($fichero, filesize($rutaXq));
-    // Cerramos el fichero
-    fclose($fichero);
-    
-    // Crear sesion
-    $session = new Session();
+    //variables
+    $id = $_GET["id"];
+   
 
-    // Abrir y el nombre de la base de datos en el servidor BaseX
-    $session->execute("open universidad"); 
-
+	$rutaXq = "../XQUERY/eliminar.xq";
+	if (!file_exists($rutaXq)) {
+		die("Error: El archivo eliminar.xq no existe en la ruta especificada.");
+	}
+	
+	$fichero = fopen($rutaXq, "r");
+	if ($fichero === false) {
+		die("Error: No se pudo abrir el archivo eliminar.xq para lectura.");
+	}
+	
+	$xq = fread($fichero, filesize($rutaXq));
+	if ($xq === false) {
+		die("Error: No se pudo leer el contenido del archivo eliminar.xq.");
+	}
+	
+	fclose($fichero);
+	
+    // create session
+    $session = new Session();    
+    // open database
+    $session->execute("open tienda"); // open y el nombre de la base de datos en el servidor BaseX
     // xquery
     $query = $session->query($xq);
-    $query->bind('$codigoJuego',$_GET["codigoJuego"]);
-    $query->bind('$nombre', $_GET["nombre"]);
-    $query->bind('$descripcion', $_GET["descripcion"]);
-    $query->bind('$genero',$_GET["genero"]);
-    $query->bind('$precio',$_GET["precio"]);
+    $query->bind('$id',$id);
     
-    // Ejecutar la consulta
+    // execute result
     $result = $query->execute();
-
     // close query
     $query->close();
     // close session
     $session->close();
 
     // Show the result
-    echo $result;
-
-    // Lanza la xquery
-    $xmlSRT = $session->execute("xquery /");
-
-    $rutaXSLT = "";
-    $xml = new DOMDocument;
-    $xml->load($rutaXSLT);
-
-    $proc = new XSLTProcessor;
-    $proc->importStyleSheet($xsl);
-
+    
+    
 } catch(Exception $e) {
+
     echo $e->getMessage();
+
 }
+
+?> 

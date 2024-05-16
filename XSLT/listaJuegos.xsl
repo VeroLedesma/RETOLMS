@@ -7,7 +7,7 @@
   <html>
   <body>
     <xsl:for-each select="tienda/juegos/juego[genero=$genero or $genero='all']">
-      <a href="DetailsGame.php?id={@id}" target="_blank">
+      <a href="../PHP/DetailsGame.php?id={@id}" target="_blank">
         <div class="item">
           <div class="item_footer">
             <h2><xsl:value-of select="nombre"/></h2>

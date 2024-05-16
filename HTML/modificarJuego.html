@@ -16,10 +16,10 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css" />
 
     <!-- JS -->
-    <script type="text/javascript" src="../js/mejora.js"></script>
+    <script type="text/javascript" src="../js/modificarJuego.js"></script>
 </head>
 
-<body onload="recibirRespuesta()">
+<body>
     <div class="container">
         <!-- Sidebar Section -->
         <div class="sidebar">
@@ -46,29 +46,26 @@
                         <span>Ajustes</span>
                     </li>
                 </a>
-                
-                <a>
-                    <li class="active">
+                <a href="./addGames.html">
+                    <li>
                         <i class="fa-solid fa-plus"></i>
                         <span>Agregar juego</span>
                     </li>
                 </a>
-            </a>
-            <a href="./modificarJuego.html">
-                <li>
-                    <i class="fa-solid fa-pencil"></i>
-    
-                    <span>Modificar Juego</span>
-                </li>
-            </a>
-            <a href="./borrarJuegos.html">
-                <li>
-                    <i class="fa-solid fa-trash"></i>
-    
-                    <span>Borrar Juego</span>
-                </li>
-            </a>
-
+                <a>
+                    <li class="active">
+                        <i class="fa-solid fa-pencil"></i>
+        
+                        <span>Modificar Juego</span>
+                    </li>
+                </a>
+                <a href="./borrarJuegos.html">
+                    <li>
+                        <i class="fa-solid fa-trash"></i>
+        
+                        <span>Borrar Juego</span>
+                    </li>
+                </a>
             </ul>
         </div>
         <!-- ./Sidebar Section -->
@@ -76,13 +73,13 @@
 
     <div class="content">
         <header>
-            <h1>Inserción de Video-juegos</h1>
+            <h1>Modificar de Video-juegos</h1>
         </header>
 
         <div class="container2">
             <div class="main">
                 <div class="main__header">
-                    <h2>Alta videojuego</h2>
+                    <h2>Modificar videojuego</h2>
                 </div>
                 <div class="main__content">
                     <div class="main__settings-form">
@@ -123,10 +120,9 @@
                             </select>
                             <label for="publicado">Publicado:</label>
                             <input type="checkbox" id="publicado" name="publicado">
-                        
                         </form>
                         <div id="errores"></div>
-                        <button type="button" class="btn main__save-button" id="enviarGame" onclick="enviarDatos();">Guardar</button>
+                        <button type="button" class="btn main__save-button" id="modificarJuego" onclick="modificarJuego();">Modificar Juego </button>
                         <button class="btn main__cancel-button">Cancelar</button>
                     </div>
                 </div>

@@ -10,6 +10,7 @@ function enviarDatos() {
     var genero = document.getElementById('genero').value;
     var precio = document.getElementById('precio').value;
     var tipo = document.getElementById('tipo').value;
+    var categoria= document.getElementById('categoria').value;
     var publicado = document.getElementById('publicado').checked; // Esto será true si el checkbox está marcado, y false si no lo está
 
     // Verificar si algún campo está vacío

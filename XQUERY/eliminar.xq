@@ -1,9 +1,4 @@
 declare variable $id as xs:string external;
+let $juego := //juego [@id = $id]
 
-let $archivo_xml := doc("tienda.xml")
-
-let $juego := $archivo_xml//juego[@id = $id]
-
-return (
-    delete node $juego
-)
+return delete node $juego
