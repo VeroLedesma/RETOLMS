@@ -2,13 +2,13 @@
 <html lang="es">
 
 <head>
+    <!-- Metadatos -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legends Store - Settings</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
-
     <link rel="stylesheet" href="../assets/css/default.css">
     <link rel="stylesheet" href="../assets/css/settings.css">
 
@@ -21,12 +21,13 @@
 
 <body>
     <div class="container">
-        <!-- Sidebar Section -->
+        <!-- Barra lateral -->
         <div class="sidebar">
             <div class="logo">
                 <i class="fab fa-playstation"></i>
             </div>
             <ul>
+                <!-- Enlaces de navegación -->
                 <a href="./index.html">
                     <li>
                         <i class="fas fa-crown"></i>
@@ -46,30 +47,29 @@
                         <span>Ajustes</span>
                     </li>
                 </a>
-            </a>
-            <a href="./addGames.html">
-                <li>
-                    <i class="fa-solid fa-plus"></i>
-                    <span>Agregar juego</span>
-                </li>
-            </a>
-            <a href="./modificarJuego.html">
-                <li>
-                    <i class="fa-solid fa-pencil"></i>
-    
-                    <span>Modificar Juego</span>
-                </li>
-            </a>
-            <a>
-                <li class="active">
-                    <i class="fa-solid fa-trash"></i>
-    
-                    <span>Borrar Juego</span>
-                </li>
-            </a>
+                <!-- Enlace activo resaltado -->
+                <a href="./addGames.html">
+                    <li>
+                        <i class="fa-solid fa-plus"></i>
+                        <span>Agregar juego</span>
+                    </li>
+                </a>
+                <a href="./modificarJuego.html">
+                    <li>
+                        <i class="fa-solid fa-pencil"></i>
+                        <span>Modificar Juego</span>
+                    </li>
+                </a>
+                <!-- Enlace activo resaltado -->
+                <a>
+                    <li class="active">
+                        <i class="fa-solid fa-trash"></i>
+                        <span>Borrar Juego</span>
+                    </li>
+                </a>
             </ul>
         </div>
-        <!-- ./Sidebar Section -->
+        <!-- ./Barra lateral -->
     </div>
 
     <div class="content">
@@ -84,6 +84,7 @@
                 </div>
                 <div class="main__content">
                     <div class="main__settings-form">
+                        <!-- Formulario de borrado de videojuegos -->
                         <form id="formJuego" name="formJuego" enctype="multipart/form-data">
                             <input placeholder="ID del videojuego" type="text" id="id" name="id" />
                             <label for="Nombre">Nombre:</label>
@@ -92,6 +93,7 @@
                             <input placeholder="Descripcion del videojuego" type="text" name="descripcion" id="descripcion">
                             <label for="Genero">Genero:</label>
                             <select id="genero" name="genero">
+                                <!-- Opciones del menú desplegable -->
                                 <option value="Accion">Acción</option>
                                 <option value="Aventura">Aventura</option>
                                 <option value="Carreras">Carreras</option>
@@ -104,11 +106,10 @@
                                 <option value="Plataformas">Plataformas</option>
                             </select>
                             <label for="Precio">Precio:</label>
-    
                             <input placeholder="Precio del videojuego" type="text" name="precio" id="precio" />
                             <!-- <label for="imagen">Imagen:</label>
                             <input type="file" id="imagen" name="imagen">
-                         -->
+                            -->
                             <label for="tipo">Tipo:</label>
                             <select id="tipo" name="tipo">
                                 <option value="2D">2D</option>
@@ -122,8 +123,11 @@
                             <label for="publicado">Publicado:</label>
                             <input type="checkbox" id="publicado" name="publicado">
                         </form>
+                        <!-- Div para mostrar errores -->
                         <div id="errores"></div>
+                        <!-- Botón para borrar juego -->
                         <button type="button" class="btn main__save-button" id="borrarJuego" onclick="borrarJuego();">Borrar Juego </button>
+                        <!-- Botón para cancelar -->
                         <button class="btn main__cancel-button">Cancelar</button>
                     </div>
                 </div>

@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legends Store - Game Store</title>
@@ -13,8 +14,8 @@
     <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.2.0/css/all.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700'>
     <!-- CSS -->
-    <link rel="stylesheet" href="../assets/css/libreria.css">
-    <link rel="stylesheet" href="../assets/css/defaultLibreria.css">
+    <link rel="stylesheet" href="../assets/css/libreria.css"> <!-- Library CSS -->
+    <link rel="stylesheet" href="../assets/css/defaultLibreria.css"> <!-- Default Library CSS -->
 
 </head>
 
@@ -22,22 +23,27 @@
     <div class="container">
         <!-- Sidebar Section -->
         <div class="sidebar">
+            <!-- Logo -->
             <div class="logo">
                 <i class="fab fa-playstation"></i>
             </div>
+            <!-- Navigation menu -->
             <ul>
+                <!-- Home -->
                 <a href="./index.html">
                     <li>
                         <i class="fas fa-crown"></i>
                         <span>Inicio</span>
                     </li>
                 </a>
+                <!-- Library (active) -->
                 <a>
                     <li class="active">
                         <i class="fa-solid fa-book"></i>
                         <span>Biblioteca</span>
                     </li>
                 </a>
+                <!-- Settings -->
                 <a href="./settings.html">
                     <li>
                         <i class="fa-solid fa-gear"></i>
@@ -45,6 +51,7 @@
                         <span>Ajustes</span>
                     </li>
                 </a>
+                <!-- Add Game -->
                 <a href="./captchaLog.html">
                     <li>
                         <i class="fa-solid fa-plus"></i>
@@ -59,10 +66,12 @@
         <div class="content">
             <!-- Header Section -->
             <header>
+                <!-- Search bar -->
                 <div class="search">
                     <i class="fas fa-search"></i>
                     <input type="text" placeholder="Search...">
                 </div>
+                <!-- Navigation links -->
                 <nav>
                     <a href="./index.html">All</a>
                     <a href="./pages/categories/action.html">Action</a>
@@ -76,9 +85,12 @@
             </header>
             <!-- ./Header Section -->
 
+            <!-- Main content -->
             <div class="main-flex">
                 <main>
+                    <!-- Game options -->
                     <div class="options">
+                        <!-- Individual game option -->
                         <div class="option active">
                             <div class="shadow"></div>
                             <div class="label">
@@ -91,62 +103,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="option">
-                            <div class="shadow"></div>
-                            <div class="label">
-                                <div class="info">
-                                    <div class="purchase">
-                                        <button>Install</button>
-                                    </div>
-                                    <div class="main">Divinity: Original Sin 2</div>
-                                    <div class="sub"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="option">
-                            <div class="shadow"></div>
-                            <div class="label">
-                                <div class="info">
-                                    <div class="purchase">
-                                        <button>Install</button>
-                                    </div>
-                                    <div class="main">Limbo</div>
-                                </div>
-                                <div class="sub"></div>
-                            </div>
-                        </div>
-                        <div class="option">
-                            <div class="shadow"></div>
-                            <div class="label">
-                                <div class="info">
-                                    <div class="purchase">
-                                        <button>Install</button>
-                                    </div>
-                                    <div class="main">Disco Elysium</div>
-                                    <div class="sub"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="option">
-                            <div class="shadow"></div>
-                            <div class="label">
-                                <div class="info">
-                                    <div class="purchase">
-                                        <button>Install</button>
-                                    </div>
-                                    <div class="main">cyberpunk 2077</div>
-                                    <div class="sub"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div> <!-- Footer Section -->
+                        <!-- Additional game options -->
+                    </div>
+                    <!-- Footer Section -->
                     <footer>
 
-                    </footer> <!-- ./Footer Section -->
+                    </footer>
+                    <!-- ./Footer Section -->
+                </main>
             </div>
-            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-            <script src="../assets/js/script.js"></script>
+        </div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="../assets/js/script.js"></script>
 </body>
 
 </html>

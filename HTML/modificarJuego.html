@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legends Store - Settings</title>
@@ -9,13 +10,13 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
 
-    <link rel="stylesheet" href="../assets/css/default.css">
-    <link rel="stylesheet" href="../assets/css/settings.css">
+    <link rel="stylesheet" href="../assets/css/default.css"> <!-- Default CSS -->
+    <link rel="stylesheet" href="../assets/css/settings.css"> <!-- Settings CSS -->
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css" />
 
-    <!-- JS -->
+    <!-- JavaScript -->
     <script type="text/javascript" src="../js/modificarJuego.js"></script>
 </head>
 
@@ -23,46 +24,52 @@
     <div class="container">
         <!-- Sidebar Section -->
         <div class="sidebar">
+            <!-- Logo -->
             <div class="logo">
                 <i class="fab fa-playstation"></i>
             </div>
+            <!-- Navigation menu -->
             <ul>
+                <!-- Home -->
                 <a href="./index.html">
                     <li>
                         <i class="fas fa-crown"></i>
                         <span>Inicio</span>
                     </li>
                 </a>
+                <!-- Library -->
                 <a href="./libreria.html">
                     <li>
                         <i class="fa-solid fa-book"></i>
                         <span>Biblioteca</span>
                     </li>
                 </a>
+                <!-- Settings (active) -->
                 <a href="./settings.html">
-                    <li>
+                    <li class="active">
                         <i class="fa-solid fa-gear"></i>
                         <i class="fi fi-sr-settings"></i>
                         <span>Ajustes</span>
                     </li>
                 </a>
+                <!-- Add Game -->
                 <a href="./addGames.html">
                     <li>
                         <i class="fa-solid fa-plus"></i>
                         <span>Agregar juego</span>
                     </li>
                 </a>
+                <!-- Modify Game -->
                 <a>
                     <li class="active">
                         <i class="fa-solid fa-pencil"></i>
-        
                         <span>Modificar Juego</span>
                     </li>
                 </a>
+                <!-- Delete Game -->
                 <a href="./borrarJuegos.html">
                     <li>
                         <i class="fa-solid fa-trash"></i>
-        
                         <span>Borrar Juego</span>
                     </li>
                 </a>
@@ -72,16 +79,19 @@
     </div>
 
     <div class="content">
+        <!-- Header -->
         <header>
             <h1>Modificar de Video-juegos</h1>
         </header>
 
+        <!-- Main content -->
         <div class="container2">
             <div class="main">
                 <div class="main__header">
                     <h2>Modificar videojuego</h2>
                 </div>
                 <div class="main__content">
+                    <!-- Settings form -->
                     <div class="main__settings-form">
                         <form id="formJuego" name="formJuego" enctype="multipart/form-data">
                             <input placeholder="ID del videojuego" type="text" id="codigoJuego" name="codigoJuego" />
@@ -90,45 +100,50 @@
                             <label for="Descripción">Descripción:</label>
                             <input placeholder="Descripcion del videojuego" type="text" name="descripcion" id="descripcion">
                             <label for="Genero">Genero:</label>
+                            <!-- Genre options -->
                             <select id="genero" name="genero">
                                 <option value="Accion">Acción</option>
                                 <option value="Aventura">Aventura</option>
                                 <option value="Carreras">Carreras</option>
                                 <option value="Deportes">Deportes</option>
-                                <option value="Estrategia"> Estrategia</option>
+                                <option value="Estrategia">Estrategia</option>
                                 <option value="Simulacion">Simulacion</option>
                                 <option value="Rol">Rol</option>
                                 <option value="Puzzle">Puzzle</option>
                                 <option value="Musical">Musical</option>
                                 <option value="Plataformas">Plataformas</option>
                             </select>
+                            <!-- Price input -->
                             <label for="Precio">Precio:</label>
-    
                             <input placeholder="Precio del videojuego" type="text" name="precio" id="precio" />
-                            <!-- <label for="imagen">Imagen:</label>
-                            <input type="file" id="imagen" name="imagen">
-                         -->
+                            <!-- Type selector -->
                             <label for="tipo">Tipo:</label>
                             <select id="tipo" name="tipo">
                                 <option value="2D">2D</option>
                                 <option value="3D">3D</option>
                             </select>
+                            <!-- Category selector -->
                             <label for="categoria">Categoria:</label>
                             <select id="categoria" name="categoria">
                                 <option value="01">Nacional</option>
                                 <option value="02">Internacional</option>
                             </select>
+                            <!-- Checkbox for publication -->
                             <label for="publicado">Publicado:</label>
                             <input type="checkbox" id="publicado" name="publicado">
                         </form>
+                        <!-- Error message display -->
                         <div id="errores"></div>
+                        <!-- Modify button -->
                         <button type="button" class="btn main__save-button" id="modificarJuego" onclick="modificarJuego();">Modificar Juego </button>
+                        <!-- Cancel button -->
                         <button class="btn main__cancel-button">Cancelar</button>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Footer -->
         <footer> 2023 &copy; Legends Store. Todos los derechos reservados. </footer>
     </div>
 </body>
