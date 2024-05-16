@@ -1,3 +1,4 @@
+
 <?php
     // Obtén el ID del juego del parámetro de la URL
     $id = $_GET['id'];

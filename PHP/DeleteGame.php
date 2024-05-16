@@ -1,8 +1,9 @@
+
 <?php
 require_once('BDCOnexion.php');
 
 try {
-    $rutaXq = "prueba.xq";
+    $rutaXq = "../XQUERY/eliminar.xq";
     // Abrimos el fichero $rutaXq en modo lectura "r"
     $fichero = fopen($rutaXq, "r"); 
     // Leemos el contenido del fichero y lo guardamos en la variable $xq

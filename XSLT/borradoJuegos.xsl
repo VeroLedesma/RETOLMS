@@ -14,10 +14,13 @@
                     <p>Género: <xsl:value-of select="genero"/></p>
                     <p>Precio: <xsl:value-of select="precio"/></p>
                     <p>Tipo: <xsl:value-of select="tipo"/></p>
-                    <p>Categoria: <xsl:value-of select="categoria"/></p>
                     <xsl:call-template name="publicado">
                         <xsl:with-param name="publicado" select="@publicado"/>
                     </xsl:call-template>
+                    <form method="post" action="borrar.php">
+                        <input type="hidden" name="id" value="{@id}"/>
+                        <input type="submit" value="Borrar"/>
+                    </form>
                 </div>
             </div>
         </xsl:for-each>
