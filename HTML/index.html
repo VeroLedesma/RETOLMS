@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legends Store - Game Store</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/default.css" />
+    <link rel="stylesheet" href="../assets/css/index.css" />
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css" />
+
+    <script>
+        function Transformar() {
+            var xhttp = new XMLHttpRequest();
+            var genero = document.getElementById("genero").value;
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("special-offerts").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "../PHP/BDAccess.php?genero=" + genero, true);
+            xhttp.send();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar Section -->
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fab fa-playstation"></i>
+            </div>
+            <ul>
+                <a href="./index.html">
+                    <li class="active">
+                        <i class="fas fa-crown"></i>
+                        <span>Inicio</span>
+                    </li>
+                </a>
+                <a href="./libreria.html">
+                    <li>
+                        <i class="fa-solid fa-book"></i>
+                        <span>Biblioteca</span>
+                    </li>
+                </a>
+                <a href="./settings.html">
+                    <li>
+                        <i class="fa-solid fa-gear"></i>
+                        <i class="fi fi-sr-settings"></i>
+                        <span>Ajustes</span>
+                    </li>
+                </a>
+                <a href="./addGames.html">
+                    <li>
+                        <i class="fa-solid fa-plus"></i>
+                        <span>Agregar juego</span>
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <!-- ./Sidebar Section -->
+
+
+        <!-- Content Section -->
+        <div class="content">
+            <!-- Header Section -->
+            <header>
+                <div class="search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <nav>
+                    <a href="./index.html">All</a>
+                    <a href="./pages/categories/action.html">Action</a>
+                    <a href="./pages/categories/adventure.html">Adventure</a>
+                    <a href="./pages/categories/indie.html">Indie</a>
+                    <a href="./pages/categories/indie.html">Multiplayer</a>
+                    <a href="./pages/categories/racing.html">Racing</a>
+                    <a href="./pages/categories/rpg.html">RPG</a>
+                    <i class="fas fa-bars" id="hamburger"></i>
+                </nav>
+            </header>
+            <!-- ./Header Section -->
+            </header>
+            <!-- ./Header Section -->
+            
+            <main>
+                <section class="header-legendary"></section>
+
+                <section class="special-offerts">
+                    <div class="header">
+                        <h3>Juegos nuevos agregados</h3>
+                        <!-- Juegos filtrados por categoría -->
+                        <select id="genero">
+                            <option value="all">Todos</option>
+                            <option value="Accion">Acción</option>
+                            <option value="Aventura">Aventura</option>
+                            <option value="Carreras">Carreras</option>
+                            <option value="Sandbox">Sandbox</option>
+                            <option value="Role-Playing">Role-Playing</option>
+                            <option value="Estrategia">Estrategia</option>
+                            <option value="Indie">Indie</option>
+                            <option value="Multijugador">Multijugador</option>
+                        </select>
+                        <button type="button" onclick="Transformar()">Mostrar más</button>
+                    </div>
+                    <div class="grid-container" id="special-offerts">
+
+                    </div>
+                </section>
+
+                <section class="games-streaming">
+                    <div class="header">
+                        <h3>Juegos trasmitidos ahora</h3>
+                        <button>Mostrar más</button>
+                    </div>
+                    <div class="grid-container">
+                        <div class="item">
+                            <div class="video">
+                                <iframe width="560" height="208" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                            <div class="title">
+                                <span class="live_steam_app">Victoria 3</span>
+                                <span class="live_steam_viewers">7759</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="video">
+                                <iframe width="560" height="208" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                            <div class="title">
+                                <span class="live_steam_app">Victoria 3</span>
+                                <span class="live_steam_viewers">7759</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="video">
+                                <iframe width="560" height="208" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                            <div class="title">
+                                <span class="live_steam_app">Victoria 3</span>
+                                <span class="live_steam_viewers">7759</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="video">
+                                <iframe width="560" height="208" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                            <div class="title">
+                                <span class="live_steam_app">Victoria 3</span>
+                                <span class="live_steam_viewers">7759</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="video">
+                                <iframe width="560" height="208" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                            <div class="title">
+                                <span class="live_steam_app">Victoria 3</span>
+                                <span class="live_steam_viewers">7759</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="video">
+                                <iframe width="560" height="208" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                            <div class="title">
+                                <span class="live_steam_app">Victoria 3</span>
+                                <span class="live_steam_viewers">7759</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="login">
+                    <p>Inicia sesión para ver recomendaciones personalizadas</p>
+                    <a href="/login.html">Iniciar sesión</a>
+                    <p>O <a href="/register.html">regístrate</a> y únete a Legends gratis</p>
+                </section>
+            </main>
+
+            <!-- Footer Section -->
+            <footer>
+
+            </footer>
+            <!-- ./Footer Section -->
+        </div>
+        <!-- ./Content Section -->
+    </div>
+</body>
+</html>
